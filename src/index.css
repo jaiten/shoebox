@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Source Serif 4", ui-serif, Georgia, serif;
+
+  --color-surface-bright: #f9f9f9;
+  --color-on-surface: #1b1b1b;
+  --color-on-surface-variant: #444748;
+  --color-primary: #000000;
+  --color-on-primary: #ffffff;
+
+  /* Brand gold accent */
+  --color-gold: #c4a25a;
+  --color-gold-light: #d4b472;
+  --color-gold-dark: #a6883d;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Grayscale and luxury photo styles */
+.luxury-image {
+  filter: grayscale(100%);
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-image:hover {
+  filter: grayscale(0%);
+}
+
+/* Scroll progress indicator */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #c4a25a, #f0d090, #c4a25a);
+  transform-origin: left center;
+  z-index: 200;
+  pointer-events: none;
+}
+
+/* Gold shimmer text effect */
+@keyframes gold-shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+.gold-shimmer {
+  background: linear-gradient(90deg, #a6883d 0%, #f0d090 40%, #c4a25a 60%, #a6883d 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gold-shimmer 4s linear infinite;
+}
+
+/* Subtle animated gradient for dark sections */
+@keyframes drift {
+  0%   { transform: translate(0%, 0%) scale(1); }
+  33%  { transform: translate(3%, -3%) scale(1.05); }
+  66%  { transform: translate(-2%, 2%) scale(1.02); }
+  100% { transform: translate(0%, 0%) scale(1); }
+}
+
+.animate-drift {
+  animation: drift 18s ease-in-out infinite;
+}
+
+/* Bounce scroll indicator */
+@keyframes scroll-bounce {
+  0%, 100% { transform: translateY(0);   opacity: 0.6; }
+  50%       { transform: translateY(8px); opacity: 1;   }
+}
+
+.animate-scroll-bounce {
+  animation: scroll-bounce 2s ease-in-out infinite;
+}
+
+/* Gold glow pulse for accent dots */
+@keyframes gold-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(196, 162, 90, 0.4); }
+  50%       { box-shadow: 0 0 0 6px rgba(196, 162, 90, 0); }
+}
+
+.animate-gold-pulse {
+  animation: gold-pulse 2.5s ease-in-out infinite;
+}
+
+/* Fade-up reveal (CSS fallback for non-motion elements) */
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.reveal-up {
+  animation: reveal-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
