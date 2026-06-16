@@ -1,22 +1,62 @@
-<svg width="100%" viewBox="0 0 680 200" role="img" xmlns="http://www.w3.org/2000/svg" style="">
-  <title style="fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Shoebox Investments Inc logo</title>
-  <desc style="fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Minimal wordmark logo with geometric square mark and company name, transparent background, dark ink</desc>
+<svg width="100%" viewBox="0 0 680 200" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>Shoebox Investments Inc logo</title>
+  <desc>Deep forest green and champagne gold wordmark with geometric investment grid mark</desc>
 
   <defs>
-    
+    <linearGradient id="goldFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4B472"/>
+      <stop offset="100%" stop-color="#B8943E"/>
+    </linearGradient>
+    <linearGradient id="greenFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A3929"/>
+      <stop offset="100%" stop-color="#0E2116"/>
+    </linearGradient>
   </defs>
 
-  <g transform="translate(160, 78)" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-    <rect x="0" y="0" width="44" height="44" rx="2" style="fill:none;stroke:rgb(26, 26, 26);color:rgb(255, 255, 255);stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-    <rect x="9" y="9" width="11" height="11" rx="1" style="fill:rgb(26, 26, 26);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-    <rect x="24" y="9" width="11" height="11" rx="1" style="fill:rgb(26, 26, 26);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-    <rect x="9" y="24" width="11" height="11" rx="1" style="fill:rgb(26, 26, 26);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-    <rect x="24" y="24" width="11" height="11" rx="1" style="opacity:0.3;fill:rgb(26, 26, 26);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.3;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <g transform="translate(160, 78)">
 
-    <line x1="62" y1="6" x2="62" y2="38" style="fill:rgb(0, 0, 0);stroke:rgb(200, 196, 188);color:rgb(255, 255, 255);stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <!-- Outer border square — deep forest green stroke -->
+    <rect x="0" y="0" width="44" height="44" rx="2"
+      fill="none"
+      stroke="#1A3929"
+      stroke-width="2"/>
 
-    <text x="78" y="34" style="fill:rgb(26, 26, 26);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Georgia, &quot;Times New Roman&quot;, serif;font-size:36px;font-weight:400;text-anchor:start;dominant-baseline:auto">SHOEBOX</text>
-    <text x="79" y="56" style="fill:rgb(136, 136, 136);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:-apple-system, &quot;Helvetica Neue&quot;, Arial, sans-serif;font-size:11px;font-weight:400;text-anchor:start;dominant-baseline:auto">INVESTMENTS INC</text>
+    <!-- Top-left inner square — deep forest green -->
+    <rect x="9" y="9" width="11" height="11" rx="1"
+      fill="url(#greenFill)"/>
+
+    <!-- Top-right inner square — champagne gold -->
+    <rect x="24" y="9" width="11" height="11" rx="1"
+      fill="url(#goldFill)"/>
+
+    <!-- Bottom-left inner square — champagne gold -->
+    <rect x="9" y="24" width="11" height="11" rx="1"
+      fill="url(#goldFill)"/>
+
+    <!-- Bottom-right inner square — deep green, faded (30%) -->
+    <rect x="24" y="24" width="11" height="11" rx="1"
+      fill="#1A3929"
+      opacity="0.3"/>
+
+    <!-- Gold vertical divider line -->
+    <line x1="62" y1="5" x2="62" y2="39"
+      stroke="#C4A25A"
+      stroke-width="0.8"/>
+
+    <!-- SHOEBOX wordmark — deep forest green, Georgia serif -->
+    <text x="78" y="34"
+      fill="#1A3929"
+      font-family="Georgia, 'Times New Roman', serif"
+      font-size="36"
+      font-weight="400">SHOEBOX</text>
+
+    <!-- INVESTMENTS INC tagline — champagne gold, sans-serif -->
+    <text x="79" y="56"
+      fill="#C4A25A"
+      font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif"
+      font-size="11"
+      font-weight="400"
+      letter-spacing="2">INVESTMENTS INC</text>
+
   </g>
-
 </svg>

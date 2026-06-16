@@ -1,8 +1,44 @@
+# Dependencies
 node_modules/
-build/
+
+# Build outputs
 dist/
+build/
 coverage/
-.DS_Store
-*.log
+
+# Environment — keep the example, never commit real secrets
 .env*
 !.env.example
+
+# Vite / TypeScript cache
+.vite/
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# AI Studio internal files are excluded from the repo
+assets/.aistudio/

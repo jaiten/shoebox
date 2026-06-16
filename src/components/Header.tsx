@@ -21,7 +21,6 @@ export default function Header({ onPartnerClick }: HeaderProps) {
     const handleScroll = () => {
       const y = window.scrollY;
       setScrolled(y > 60);
-
       const doc = document.documentElement;
       const total = doc.scrollHeight - doc.clientHeight;
       setScrollProgress(total > 0 ? (y / total) * 100 : 0);
@@ -49,7 +48,7 @@ export default function Header({ onPartnerClick }: HeaderProps) {
 
   return (
     <>
-      {/* Scroll progress bar */}
+      {/* Scroll progress — green-to-gold gradient */}
       <div
         className="scroll-progress"
         style={{ width: `${scrollProgress}%` }}
@@ -59,24 +58,24 @@ export default function Header({ onPartnerClick }: HeaderProps) {
       <nav
         className={`fixed top-0 w-full h-24 z-50 transition-all duration-500 ${
           scrolled
-            ? 'bg-white/98 backdrop-blur-lg shadow-[0_1px_30px_rgba(0,0,0,0.08)] border-b border-black/5'
+            ? 'bg-white/98 backdrop-blur-lg shadow-[0_2px_32px_rgba(26,57,41,0.08)] border-b border-[#1A3929]/8'
             : 'bg-white/95 backdrop-blur-md border-b border-black/5'
         }`}
         id="headerNav"
       >
         <div className="flex justify-between items-center max-w-7xl mx-auto px-6 md:px-12 w-full h-full">
 
-          {/* Brand Wordmark */}
+          {/* Brand Logo — larger container */}
           <a
             href="#"
-            className="h-16 w-52 md:h-18 md:w-64 flex items-center justify-center overflow-hidden select-none transition-opacity hover:opacity-85"
+            className="h-20 w-64 md:h-22 md:w-80 flex items-center justify-center overflow-hidden select-none transition-opacity hover:opacity-80"
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
             aria-label="Shoebox Investments"
           >
             <img
               src={logoUrl}
               alt=""
-              className="h-full w-full object-contain scale-[1.85]"
+              className="h-full w-full object-contain scale-[2.0]"
               aria-hidden="true"
             />
           </a>
@@ -87,7 +86,7 @@ export default function Header({ onPartnerClick }: HeaderProps) {
               <button
                 key={link.name}
                 onClick={() => handleNavClick(link.href)}
-                className="relative group font-sans text-sm font-semibold tracking-wider text-neutral-500 hover:text-black transition-colors duration-300 uppercase cursor-pointer py-1"
+                className="relative group font-sans text-sm font-semibold tracking-wider text-neutral-500 hover:text-[#1A3929] transition-colors duration-300 uppercase cursor-pointer py-1"
               >
                 {link.name}
                 {/* Gold underline on hover */}
@@ -96,16 +95,16 @@ export default function Header({ onPartnerClick }: HeaderProps) {
             ))}
             <button
               onClick={onPartnerClick}
-              className="relative overflow-hidden px-6 py-3 bg-black text-white font-sans text-xs font-bold uppercase tracking-widest transition-all duration-300 active:scale-95 group cursor-pointer"
+              className="relative overflow-hidden px-6 py-3 bg-[#1A3929] text-white font-sans text-xs font-bold uppercase tracking-widest transition-all duration-300 active:scale-95 group cursor-pointer"
             >
-              <span className="relative z-10">PARTNER WITH US</span>
+              <span className="relative z-10 group-hover:text-[#1A3929] transition-colors duration-300">PARTNER WITH US</span>
               <span className="absolute inset-0 bg-[#c4a25a] translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
             </button>
           </div>
 
-          {/* Mobile Menu Icon */}
+          {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden text-black p-2"
+            className="md:hidden text-[#1A3929] p-2"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle Menu"
           >
@@ -121,7 +120,7 @@ export default function Header({ onPartnerClick }: HeaderProps) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.2 }}
-              className="md:hidden absolute top-24 left-0 w-full bg-white border-b border-black/10 shadow-lg z-40 py-6 px-6"
+              className="md:hidden absolute top-24 left-0 w-full bg-white border-b border-[#1A3929]/10 shadow-lg z-40 py-6 px-6"
             >
               <div className="flex flex-col gap-4">
                 {navLinks.map((link, i) => (
@@ -131,7 +130,7 @@ export default function Header({ onPartnerClick }: HeaderProps) {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.06 }}
                     onClick={() => handleNavClick(link.href)}
-                    className="text-left py-2 text-neutral-600 font-sans text-md font-semibold tracking-wider hover:text-black transition-colors uppercase"
+                    className="text-left py-2 text-neutral-600 font-sans text-md font-semibold tracking-wider hover:text-[#1A3929] transition-colors uppercase"
                   >
                     {link.name}
                   </motion.button>
@@ -141,7 +140,7 @@ export default function Header({ onPartnerClick }: HeaderProps) {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: navLinks.length * 0.06 }}
                   onClick={() => { setIsOpen(false); onPartnerClick(); }}
-                  className="w-full text-center py-4 bg-black text-white font-sans text-sm font-bold uppercase tracking-widest hover:bg-[#c4a25a] transition-all mt-2"
+                  className="w-full text-center py-4 bg-[#1A3929] text-white font-sans text-sm font-bold uppercase tracking-widest hover:bg-[#c4a25a] transition-all mt-2"
                 >
                   PARTNER WITH US
                 </motion.button>

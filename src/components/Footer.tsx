@@ -13,9 +13,7 @@ interface FooterProps {
 export default function Footer({ onContactClick }: FooterProps) {
   const [activeDisclaimer, setActiveDisclaimer] = useState<string | null>(null);
 
-  const handleScrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  const handleScrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   const handleNavClick = (selector: string) => {
     const element = document.querySelector(selector);
@@ -23,10 +21,7 @@ export default function Footer({ onContactClick }: FooterProps) {
       const topOffset = 96;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.scrollY - topOffset;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth',
-      });
+      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
     }
   };
 
@@ -49,72 +44,83 @@ export default function Footer({ onContactClick }: FooterProps) {
     }
   };
 
+  const linkClass = "text-left text-xs font-semibold text-[#8fbc9e] hover:text-white transition-colors duration-200";
+
   return (
-    <footer className="bg-[#eeeeee] text-[#1b1b1b] border-t border-black/10">
-      
-      {/* Top primary links segment */}
-      <div className="w-full py-20 px-6 md:px-12 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+    <footer className="bg-[#1a3929] text-white relative overflow-hidden">
+
+      {/* Subtle ambient gold glow */}
+      <div
+        className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full pointer-events-none opacity-50"
+        style={{ background: 'radial-gradient(circle, rgba(196,162,90,0.06) 0%, transparent 70%)' }}
+        aria-hidden="true"
+      />
+      {/* Top gold accent border */}
+      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#1a3929] via-[#c4a25a] to-[#1a3929]" />
+
+      {/* Top links segment */}
+      <div className="w-full py-20 px-6 md:px-12 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12 relative">
+
         <div className="max-w-md">
-          <button 
+          <button
             onClick={handleScrollToTop}
-            className="font-sans text-xl md:text-2xl font-bold tracking-wider text-black uppercase block mb-6 text-left cursor-pointer"
+            className="font-sans text-xl md:text-2xl font-bold tracking-wider text-[#c4a25a] uppercase block mb-6 text-left cursor-pointer hover:text-[#d4b472] transition-colors duration-200"
           >
             SHOEBOX INVESTMENTS
           </button>
-          <p className="font-serif text-sm md:text-md text-neutral-650 leading-relaxed font-light">
+          <p className="font-serif text-sm md:text-md text-[#8fbc9e] leading-relaxed font-light">
             A disciplined approach to capital accumulation and growth. We specialize in identifying and actively managing high-yield real estate, structured credit facilities, and private technology roll-ups across North America.
           </p>
+
+          {/* Gold accent divider */}
+          <div className="mt-8 w-12 h-[1.5px] bg-gradient-to-r from-[#c4a25a] to-transparent" />
         </div>
 
-        {/* Links Segment Grid */}
+        {/* Link grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-12 gap-y-8 font-sans">
-          
-          {/* Column 1 - Company */}
+
           <div className="flex flex-col gap-4">
-            <span className="text-xs font-bold uppercase tracking-widest text-black">Company</span>
-            <button onClick={() => handleNavClick('#about')} className="text-left text-xs font-semibold text-neutral-500 hover:text-black transition-colors">About Foundation</button>
-            <button onClick={() => handleNavClick('#focus')} className="text-left text-xs font-semibold text-neutral-500 hover:text-black transition-colors">Investment Focus</button>
-            <button onClick={() => handleNavClick('#philosophy')} className="text-left text-xs font-semibold text-neutral-500 hover:text-black transition-colors">Philosophy &amp; Ethos</button>
+            <span className="text-xs font-bold uppercase tracking-widest text-white">Company</span>
+            <button onClick={() => handleNavClick('#about')} className={linkClass}>About Foundation</button>
+            <button onClick={() => handleNavClick('#focus')} className={linkClass}>Investment Focus</button>
+            <button onClick={() => handleNavClick('#philosophy')} className={linkClass}>Philosophy &amp; Ethos</button>
           </div>
 
-          {/* Column 2 - Connect */}
           <div className="flex flex-col gap-4">
-            <span className="text-xs font-bold uppercase tracking-widest text-black">Connect</span>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-xs font-semibold text-neutral-500 hover:text-black transition-colors">LinkedIn</a>
-            <button onClick={() => setActiveDisclaimer('login')} className="text-left text-xs font-semibold text-neutral-500 hover:text-black transition-colors">Investor Login</button>
-            <button onClick={onContactClick} className="text-left text-xs font-semibold text-neutral-500 hover:text-black transition-colors">Contact GP</button>
+            <span className="text-xs font-bold uppercase tracking-widest text-white">Connect</span>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={linkClass}>LinkedIn</a>
+            <button onClick={() => setActiveDisclaimer('login')} className={linkClass}>Investor Login</button>
+            <button onClick={onContactClick} className={linkClass}>Contact GP</button>
           </div>
 
-          {/* Column 3 - Regulatory */}
           <div className="flex flex-col gap-4 col-span-2 sm:col-span-1">
-            <span className="text-xs font-bold uppercase tracking-widest text-black">Legal Disclosures</span>
-            <button onClick={() => setActiveDisclaimer('privacy')} className="text-left text-xs font-semibold text-neutral-500 hover:text-black transition-colors hover:underline underline-offset-4">Privacy Policy</button>
-            <button onClick={() => setActiveDisclaimer('terms')} className="text-left text-xs font-semibold text-neutral-500 hover:text-black transition-colors hover:underline underline-offset-4">Terms of Service</button>
-            <button onClick={() => setActiveDisclaimer('disclaimer')} className="text-left text-xs font-semibold text-neutral-500 hover:text-black transition-colors hover:underline underline-offset-4">Structured Disclosures</button>
+            <span className="text-xs font-bold uppercase tracking-widest text-white">Legal Disclosures</span>
+            <button onClick={() => setActiveDisclaimer('privacy')} className={`${linkClass} hover:underline underline-offset-4`}>Privacy Policy</button>
+            <button onClick={() => setActiveDisclaimer('terms')} className={`${linkClass} hover:underline underline-offset-4`}>Terms of Service</button>
+            <button onClick={() => setActiveDisclaimer('disclaimer')} className={`${linkClass} hover:underline underline-offset-4`}>Structured Disclosures</button>
           </div>
 
         </div>
       </div>
 
-      {/* Bottom Compliance Segment */}
-      <div className="border-t border-black/5 py-8 px-6 md:px-12 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
-        <p className="font-sans text-[11px] text-neutral-500 tracking-wider font-semibold">
+      {/* Bottom compliance bar */}
+      <div className="border-t border-white/10 py-8 px-6 md:px-12 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left relative">
+        <p className="font-sans text-[11px] text-[#6b9e7a] tracking-wider font-semibold">
           &copy; {new Date().getFullYear()} Shoebox Investments Inc. All Rights Reserved. Informational materials only. Not an offer to sell securities.
         </p>
-        
-        {/* Verification and Navigation Utilities */}
+
         <div className="flex gap-6 items-center">
-          <button 
+          <button
             onClick={() => setActiveDisclaimer('disclaimer')}
-            className="text-neutral-400 hover:text-black transition-colors"
+            className="text-[#6b9e7a] hover:text-[#c4a25a] transition-colors duration-200"
             title="Registered Protection Status"
           >
-            <Shield className="w-5 h-5 opacity-40 hover:opacity-100" />
+            <Shield className="w-5 h-5 opacity-60 hover:opacity-100" />
           </button>
-          <a 
-            href="#" 
+          <a
+            href="#"
             onClick={(e) => { e.preventDefault(); handleScrollToTop(); }}
-            className="p-2 border border-black/10 rounded-full hover:border-black text-neutral-400 hover:text-black transition-colors"
+            className="p-2 border border-[#c4a25a]/30 rounded-full hover:border-[#c4a25a] text-[#6b9e7a] hover:text-[#c4a25a] transition-all duration-200"
             title="Scroll back to header"
           >
             <ChevronUp className="w-4 h-4" />
@@ -122,17 +128,20 @@ export default function Footer({ onContactClick }: FooterProps) {
         </div>
       </div>
 
-      {/* Mini Disclosure Modal Sheet */}
+      {/* Disclosure modal */}
       {activeDisclaimer && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-          <div 
+          <div
             onClick={() => setActiveDisclaimer(null)}
-            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+            className="absolute inset-0 bg-[#0e2116]/80 backdrop-blur-sm"
           />
-          <div className="relative bg-white text-black max-w-md w-full p-8 rounded-lg shadow-xl border border-neutral-100 z-10 animate-scale-up">
-            <div className="flex gap-3 items-center mb-4 text-black border-b border-neutral-100 pb-3">
-              <Info className="w-5 h-5 text-neutral-600" />
-              <h3 className="font-sans font-bold text-sm tracking-widest uppercase">
+          <div className="relative bg-white text-[#1a3929] max-w-md w-full p-8 shadow-2xl border border-[#1a3929]/10 z-10">
+            {/* Gold top accent */}
+            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#1a3929] via-[#c4a25a] to-transparent" />
+
+            <div className="flex gap-3 items-center mb-4 border-b border-[#1a3929]/10 pb-3">
+              <Info className="w-5 h-5 text-[#c4a25a]" />
+              <h3 className="font-sans font-bold text-sm tracking-widest uppercase text-[#1a3929]">
                 {legalDisclosures[activeDisclaimer as keyof typeof legalDisclosures].title}
               </h3>
             </div>
@@ -142,9 +151,10 @@ export default function Footer({ onContactClick }: FooterProps) {
             <div className="flex justify-end">
               <button
                 onClick={() => setActiveDisclaimer(null)}
-                className="px-5 py-2 bg-black hover:bg-neutral-800 text-white font-sans text-[10px] font-bold uppercase tracking-wider transition-colors rounded"
+                className="relative overflow-hidden px-5 py-2.5 bg-[#1a3929] text-white font-sans text-[10px] font-bold uppercase tracking-wider transition-colors group cursor-pointer"
               >
-                Acknowledge
+                <span className="relative z-10 group-hover:text-[#1a3929] transition-colors duration-300">Acknowledge</span>
+                <span className="absolute inset-0 bg-[#c4a25a] translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
               </button>
             </div>
           </div>
