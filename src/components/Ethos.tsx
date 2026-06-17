@@ -87,22 +87,25 @@ export default function Ethos() {
             className="grid grid-cols-2 gap-4"
           >
             {supportPoints.map((item, index) => {
-              const isGreenAccent = index === 1 || index === 2;
+              // Match the logo's 2×2 grid: top-left=green, top-right=gold, bottom-left=gold, bottom-right=faded green
+              const cardStyles = [
+                'bg-[#1a3929] border-white/10 hover:border-[#c4a25a]/30',
+                'bg-gradient-to-br from-[#D4B472] to-[#B8943E] border-transparent hover:border-[#c4a25a]/50',
+                'bg-gradient-to-br from-[#D4B472] to-[#B8943E] border-transparent hover:border-[#c4a25a]/50',
+                'bg-[#1a3929]/30 border-white/5 hover:border-[#c4a25a]/20',
+              ];
+              const isGold = index === 1 || index === 2;
               return (
                 <motion.div
                   key={item.title}
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.3 }}
-                  className={`aspect-square flex flex-col justify-between p-6 md:p-8 border cursor-default transition-all duration-300 group ${
-                    isGreenAccent
-                      ? 'bg-[#1a3929] border-white/10 hover:border-[#c4a25a]/30'
-                      : 'bg-white/5 border-white/5 hover:bg-[#1a3929] hover:border-[#c4a25a]/20'
-                  }`}
+                  className={`aspect-square flex flex-col justify-between p-6 md:p-8 border cursor-default transition-all duration-300 group ${cardStyles[index]}`}
                 >
-                  <span className="font-sans text-[11px] font-bold tracking-[0.2em] uppercase line-clamp-2 text-white/70 group-hover:text-[#c4a25a] transition-colors duration-300">
+                  <span className={`font-sans text-[11px] font-bold tracking-[0.2em] uppercase line-clamp-2 transition-colors duration-300 ${isGold ? 'text-[#1a3929] group-hover:text-[#0e2116]' : 'text-white/70 group-hover:text-[#c4a25a]'}`}>
                     {item.title}
                   </span>
-                  <p className="font-serif text-[11px] md:text-xs text-white/40 group-hover:text-white/60 font-light leading-relaxed mt-4 transition-colors duration-300">
+                  <p className={`font-serif text-[11px] md:text-xs font-light leading-relaxed mt-4 transition-colors duration-300 ${isGold ? 'text-[#1a3929]/70 group-hover:text-[#1a3929]' : 'text-white/40 group-hover:text-white/60'}`}>
                     {item.desc}
                   </p>
                 </motion.div>
