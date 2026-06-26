@@ -7,6 +7,7 @@ import { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
+import ActiveMandates from './components/ActiveMandates';
 import BentoFocus from './components/BentoFocus';
 import Portfolio from './components/Portfolio';
 import Ethos from './components/Ethos';
@@ -60,6 +61,9 @@ export default function App() {
           onLearnMoreClick={handleScrollToProjects} 
           onContactClick={() => handleScrollToContact()} 
         />
+
+        {/* Active Mandates — prominent callout strip */}
+        <ActiveMandates onContactClick={(type) => handleScrollToContact(type)} />
 
         {/* Foundation Desk Overview */}
         <About />

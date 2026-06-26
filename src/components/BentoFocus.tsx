@@ -87,9 +87,10 @@ export default function BentoFocus({ onSelectOpportunityType }: BentoFocusProps)
               <div className="p-4 bg-[#f3f9f4] group-hover:bg-[#1a3929] transition-colors duration-300 inline-block rounded-lg mb-8 text-[#1a3929] group-hover:text-[#c4a25a]">
                 <Building2 className="w-8 h-8" />
               </div>
-              <h3 className="font-sans text-xl md:text-2xl font-semibold mb-4 text-[#1a3929] tracking-tight">
+              <h3 className="font-sans text-xl md:text-2xl font-semibold mb-3 text-[#1a3929] tracking-tight">
                 Private Lending
               </h3>
+              <p className="font-sans text-3xl font-bold text-[#c4a25a] mb-3 tracking-tight">12%+ p.a.</p>
               <p className="font-serif text-neutral-500 text-sm md:text-base leading-relaxed font-light">
                 Short term bridge financing, and secure first/second mortgage lending solutions for complex institutional or individual property developers.
               </p>
@@ -111,11 +112,12 @@ export default function BentoFocus({ onSelectOpportunityType }: BentoFocusProps)
               <div className="p-4 bg-[#f3f9f4] group-hover:bg-[#1a3929] transition-colors duration-300 inline-block rounded-lg mb-8 text-[#1a3929] group-hover:text-[#c4a25a]">
                 <Network className="w-8 h-8" />
               </div>
-              <h3 className="font-sans text-xl md:text-2xl font-semibold mb-4 text-[#1a3929] tracking-tight">
+              <h3 className="font-sans text-xl md:text-2xl font-semibold mb-3 text-[#1a3929] tracking-tight">
                 Tech &amp; MSP
               </h3>
+              <p className="font-sans text-3xl font-bold text-[#c4a25a] mb-3 tracking-tight">$500K–$1.5M ARR</p>
               <p className="font-serif text-neutral-500 text-sm md:text-base leading-relaxed font-light">
-                Acquiring and scaling Managed Service Providers (MSPs) and MSSPs in key areas: Vancouver, Toronto, Miami, New York and Los Angeles. Seeking MSPs from $500K to $1.5M in ARR to acquire.
+                Acquiring and scaling Managed Service Providers (MSPs) and MSSPs in key areas: Vancouver, Toronto, Miami, New York and Los Angeles.
               </p>
             </div>
             <div className="relative mt-8 border-t border-neutral-200/60 pt-6">
