@@ -38,10 +38,10 @@ export default function About() {
             className="space-y-6"
           >
             <p className="font-serif text-md md:text-lg text-neutral-600 leading-relaxed font-light">
-              Shoebox Investments was built on a foundation of entrepreneurial experience and a meticulous approach to capital preservation. We don't just invest; we architect real-world opportunities.
+              Shoebox Investments is a disciplined private capital firm built on entrepreneurial experience and a meticulous approach to capital preservation. We don't just invest; we architect real-world opportunities.
             </p>
             <p className="font-serif text-md md:text-lg text-neutral-600 leading-relaxed font-light">
-              Our investment philosophy is deeply rooted in long-term multi-generational thinking, prioritizing sustainable cash-flow growth and structural equity protection over transient, highly speculative market bubbles. Every single partnership we cultivate is an active, collaborative commitment to shared executive excellence.
+              Our investment philosophy is rooted in prioritizing growth and equity protection over transient, highly speculative market bubbles. Every partnership we cultivate is an active, collaborative commitment to shared profiting and executive excellence.
             </p>
           </motion.div>
 

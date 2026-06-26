@@ -21,7 +21,7 @@ export const PROJECTS_DATA: Project[] = [
     id: 'north-delta',
     title: 'North Delta Development Project',
     category: 'Residential Development',
-    description: 'A premium mid-rise multi-family residential building in a highly desirable urban growth center. Features modern sustainable amenities, highly efficient layout designs, and exceptional transit accessibility. Developed to provide high-density housing with long-term capital appreciation.',
+    description: 'Multi-unit spacious townhouses in a highly desirable family-oriented neighborhood. Close to all amenities including schools, shopping, and highway infrastructure. Features modern sustainable amenities, highly efficient layout designs, and exceptional transit accessibility. Developed to provide high-density housing with long-term capital appreciation.',
     imageUrl: residentialDevelopmentImage,
     location: 'Canada'
   },
@@ -29,7 +29,7 @@ export const PROJECTS_DATA: Project[] = [
     id: 'victoria-subdivision',
     title: 'Victoria Subdivision Project',
     category: 'Land Development',
-    description: 'A master-planned residential subdivision consisting of single-family building lots. The project utilizes structured civil designs, pristine green setbacks, and rigorous soil/land remediation techniques to secure pristine value. Fully pre-zoned and entitled to bypass market volatility cycles.',
+    description: 'Multi-acre lots rural style subdivision consisting of single-family building lots with view potential. Easy highway access and close to town centres.',
     imageUrl: landDevelopmentImage,
     location: 'Canada'
   },
@@ -37,7 +37,7 @@ export const PROJECTS_DATA: Project[] = [
     id: 'vancouver-private-credit',
     title: 'Metro Vancouver Mezzanine Credit',
     category: 'Private Lending',
-    description: 'Structured junior bridge facility for a commercial mixed-use retail redevelopment project in Vancouver\'s Broadway expansion corridor. Provides strong risk-adjusted returns backed by secondary collateral guarantees and robust developer equity.',
+    description: 'Private lending at 12%/annum for short term financing of real estate projects in the Lower Mainland and GTA. Secure first/second mortgage lending solutions for individual and institutional property developers.',
     imageUrl: creditTechnologyImage,
     location: 'Canada'
   },
@@ -45,7 +45,7 @@ export const PROJECTS_DATA: Project[] = [
     id: 'toronto-msp-rollup',
     title: 'Ontario Enterprise Tech Partners II',
     category: 'MSP/Technology',
-    description: 'Strategic equity injection supporting the consolidation and organic operational expansion of two premium Managed Service Providers. Service deliveries include predictive cybersecurity compliance, multicloud provisioning, and automated data pipelines.',
+    description: 'Strategic equity purchases of small and midsize Managed Service Providers. MSP role is the delivery of predictive cybersecurity services, AI services, and support services.',
     imageUrl: creditTechnologyImage,
     location: 'Canada'
   }

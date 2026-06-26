@@ -12,9 +12,8 @@ interface HeroProps {
 }
 
 const stats = [
-  { value: '3',   label: 'Regional Offices'    },
-  { value: '4',   label: 'Investment Verticals' },
-  { value: '10+', label: 'Active Partnerships'  },
+  { value: 'Vancouver', label: 'Head Office'          },
+  { value: '4',         label: 'Investment Verticals' },
 ];
 
 export default function Hero({ onLearnMoreClick, onContactClick }: HeroProps) {
@@ -78,7 +77,7 @@ export default function Hero({ onLearnMoreClick, onContactClick }: HeroProps) {
             transition={{ duration: 0.9, delay: 0.32, ease: [0.16, 1, 0.3, 1] }}
             className="font-serif text-lg md:text-xl text-white/70 mb-11 max-w-xl leading-relaxed font-light"
           >
-            A premier private equity and asset management firm based in Canada and the United States, specializing in the acquisition and disciplined stewardship of high-yield real estate partnerships, private credit, and transformative technology ventures.
+            A premier private equity and asset management firm based in Canada with interest in partnerships of high-yield real estate, private credit, and transformative technology ventures in AI, MSP and MSSP space.
           </motion.p>
 
           {/* CTAs */}
@@ -131,7 +130,7 @@ export default function Hero({ onLearnMoreClick, onContactClick }: HeroProps) {
         className="relative z-10 bg-[#1a3929]/80 backdrop-blur-md border-t border-[#c4a25a]/20"
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-3 divide-x divide-[#c4a25a]/15 py-5 md:py-6">
+          <div className="grid grid-cols-2 divide-x divide-[#c4a25a]/15 py-5 md:py-6">
             {stats.map((stat) => (
               <div key={stat.label} className="flex flex-col items-center px-4 md:px-8 gap-1">
                 <span className="font-sans text-xl md:text-3xl font-bold text-[#c4a25a] tracking-tight">

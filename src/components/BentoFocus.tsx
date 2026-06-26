@@ -68,7 +68,7 @@ export default function BentoFocus({ onSelectOpportunityType }: BentoFocusProps)
                 Real Estate Partnerships
               </h3>
               <p className="font-serif text-sm md:text-md text-white/70 leading-relaxed max-w-lg font-light">
-                Land assemblies, high-rise residential subdivisions, and strategic developer joint ventures across rapidly growing metropolitan North American corridors.
+                Land assemblies, townhouses, high-rise residential subdivisions, and strategic developer joint ventures across rapidly growing metropolitan North American corridors.
               </p>
             </div>
 
@@ -91,7 +91,7 @@ export default function BentoFocus({ onSelectOpportunityType }: BentoFocusProps)
                 Private Lending
               </h3>
               <p className="font-serif text-neutral-500 text-sm md:text-base leading-relaxed font-light">
-                Specialized bridge financing, custom mezzanine credit facilities, and secure first/second mortgage lending solutions for complex institutional developer space.
+                Short term bridge financing, and secure first/second mortgage lending solutions for complex institutional or individual property developers.
               </p>
             </div>
             <div className="relative mt-8 border-t border-neutral-200/60 pt-6">
@@ -115,7 +115,7 @@ export default function BentoFocus({ onSelectOpportunityType }: BentoFocusProps)
                 Tech &amp; MSP
               </h3>
               <p className="font-serif text-neutral-500 text-sm md:text-base leading-relaxed font-light">
-                Acquiring and scaling operationally efficient Managed Service Providers (MSPs) inside key regional high-density tech hubs: Vancouver, Toronto, and Miami.
+                Acquiring and scaling Managed Service Providers (MSPs) and MSSPs in key areas: Vancouver, Toronto, Miami, New York and Los Angeles. Seeking MSPs from $500K to $1.5M in ARR to acquire.
               </p>
             </div>
             <div className="relative mt-8 border-t border-neutral-200/60 pt-6">
@@ -146,7 +146,7 @@ export default function BentoFocus({ onSelectOpportunityType }: BentoFocusProps)
                 Venture Capital
               </h3>
               <p className="font-serif text-white/65 text-sm md:text-base leading-relaxed mb-8 font-light">
-                Strategic minority and majority early-stage investments inside high-barrier enterprise Software, machine intelligence platforms, and logistics automation pipelines that directly re-architect operational scale.
+                Minority and majority early-stage investments inside high-barrier enterprise software, machine intelligence platforms, and logistics automation pipelines that directly re-architect operational scale.
               </p>
 
               <div className="grid grid-cols-2 gap-x-4 gap-y-3">
