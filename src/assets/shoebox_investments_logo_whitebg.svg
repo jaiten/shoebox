@@ -15,26 +15,26 @@
 
   <g transform="translate(160, 78)">
 
-    <!-- Outer border square — deep forest green stroke -->
-    <rect x="0" y="-6" width="58" height="68" rx="2"
+    <!-- Outer border square — deep forest green stroke, 66×66 matching line height -->
+    <rect x="0" y="-4" width="66" height="66" rx="2"
       fill="none"
       stroke="#1A3929"
       stroke-width="2"/>
 
     <!-- Top-left inner square — deep forest green -->
-    <rect x="11" y="6" width="14" height="14" rx="1"
+    <rect x="15" y="11" width="14" height="14" rx="1"
       fill="url(#greenFill)"/>
 
     <!-- Top-right inner square — champagne gold -->
-    <rect x="33" y="6" width="14" height="14" rx="1"
+    <rect x="37" y="11" width="14" height="14" rx="1"
       fill="url(#goldFill)"/>
 
     <!-- Bottom-left inner square — champagne gold -->
-    <rect x="11" y="28" width="14" height="14" rx="1"
+    <rect x="15" y="33" width="14" height="14" rx="1"
       fill="url(#goldFill)"/>
 
     <!-- Bottom-right inner square — deep green, faded (30%) -->
-    <rect x="33" y="28" width="14" height="14" rx="1"
+    <rect x="37" y="33" width="14" height="14" rx="1"
       fill="#1A3929"
       opacity="0.3"/>
 
