@@ -65,11 +65,11 @@ export default function Header({ onPartnerClick }: HeaderProps) {
         <div className="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full h-full gap-2 sm:gap-3">
           <a
             href="#"
-            className="w-1/2 sm:w-96 xl:w-[38rem] aspect-[380/61] flex items-center justify-center select-none transition-opacity hover:opacity-80 shrink-0"
+            className="w-[56%] max-w-[13.5rem] sm:w-72 md:w-[21rem] xl:w-[24rem] flex items-center justify-start select-none transition-opacity hover:opacity-80 shrink-0"
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
             aria-label="Shoebox Investments"
           >
-            <Logo className="h-full w-full" />
+            <Logo className="block w-full h-auto" />
           </a>
 
           <div className="hidden lg:flex items-center gap-10">

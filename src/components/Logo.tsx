@@ -9,7 +9,13 @@ interface LogoProps {
 
 export default function Logo({ className }: LogoProps) {
   return (
-    <svg viewBox="0 0 760 122" role="img" className={className} xmlns="http://www.w3.org/2000/svg">
+    <svg
+      viewBox="0 0 390 122"
+      preserveAspectRatio="xMinYMid meet"
+      role="img"
+      className={className}
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <title>Shoebox Investments Inc logo</title>
       <desc>Deep forest green and champagne gold wordmark with geometric investment grid mark</desc>
 

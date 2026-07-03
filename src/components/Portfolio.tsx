@@ -3,25 +3,25 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { X, MapPin, Layers, Check, Clock } from 'lucide-react';
-import { PROJECTS_DATA } from '../data';
-import { Project } from '../types';
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import { X, MapPin, Layers, Check, Clock } from "lucide-react";
+import { PROJECTS_DATA } from "../data";
+import { Project } from "../types";
 
 interface PortfolioProps {
   onPartnerClick: () => void;
 }
 
 const partnerInterests = [
-  'Residential developments',
-  'Multi-family projects',
-  'Townhome communities',
-  'Land subdivision projects',
-  'Joint venture partnerships',
-  'Strategic real estate investments',
-  'Development opportunities in British Columbia',
-  'Investment and development opportunities in Florida and the Miami area',
+  "Residential developments",
+  "Multi-family projects",
+  "Townhome communities",
+  "Land subdivision projects",
+  "Joint venture partnerships",
+  "Strategic real estate investments",
+  "Development opportunities in British Columbia",
+  "Investment and development opportunities in Florida and the Miami area",
 ];
 
 export default function Portfolio({ onPartnerClick }: PortfolioProps) {
@@ -32,18 +32,18 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
 
     const previousBodyOverflow = document.body.style.overflow;
     const previousHtmlOverflow = document.documentElement.style.overflow;
-    document.body.style.overflow = 'hidden';
-    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
 
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setSelectedProject(null);
+      if (e.key === "Escape") setSelectedProject(null);
     };
-    window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener("keydown", handleKeyDown);
 
     return () => {
       document.body.style.overflow = previousBodyOverflow;
       document.documentElement.style.overflow = previousHtmlOverflow;
-      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener("keydown", handleKeyDown);
     };
   }, [selectedProject]);
 
@@ -53,7 +53,7 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-80px' }}
+          viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8 border-b border-[#1a3929]/12 pb-8"
         >
@@ -68,12 +68,18 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
               British Columbia Projects. Expanding Florida Focus.
             </h2>
             <p className="font-serif text-sm md:text-base text-neutral-600 leading-relaxed font-light">
-              Shoebox Investments partners with experienced developers to bring high-quality residential projects to life across British Columbia, with a growing focus on opportunities in Florida, particularly the Miami market.
+              Shoebox Investments partners with experienced developers to bring
+              high-quality residential projects to life across British Columbia,
+              with a growing focus on opportunities in Florida, particularly the
+              Miami market.
             </p>
           </div>
         </motion.div>
 
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+        <motion.div
+          layout
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12"
+        >
           <AnimatePresence mode="popLayout">
             {PROJECTS_DATA.map((project) => (
               <motion.div
@@ -122,7 +128,7 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
+          viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="mt-10 md:mt-12 border border-dashed border-[#1a3929]/20 p-6 sm:p-8 flex items-center gap-4"
         >
@@ -131,7 +137,7 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
           </div>
           <div>
             <span className="font-sans text-xs font-bold uppercase tracking-[0.25em] text-[#1a3929]/50 block mb-1">
-              Future Projects
+              More Projects
             </span>
             <p className="font-sans text-lg sm:text-xl font-semibold text-[#1a3929]">
               Coming Soon
@@ -142,7 +148,7 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-80px' }}
+          viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           className="mt-16 md:mt-20 bg-white border border-[#1a3929]/8 shadow-sm overflow-hidden"
         >
@@ -156,13 +162,20 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
                 </span>
               </div>
               <h3 className="font-sans text-xl sm:text-2xl md:text-4xl font-semibold tracking-tight text-[#1a3929] mb-5">
-                Capital, strategy, and long-term partnership for quality projects.
+                Capital, strategy, and long-term partnership for quality
+                projects.
               </h3>
               <p className="font-serif text-neutral-600 leading-relaxed font-light mb-4">
-                Shoebox Investments actively invests in residential and mixed-use real estate projects across British Columbia and is seeking new opportunities in Florida, especially the Miami market.
+                Shoebox Investments actively invests in residential and
+                mixed-use real estate projects across British Columbia and is
+                seeking new opportunities in Florida, especially the Miami
+                market.
               </p>
               <p className="font-serif text-neutral-600 leading-relaxed font-light">
-                We partner with experienced developers, builders, landowners, and investors by providing capital, strategic guidance, and long-term investment to help move quality projects from concept to completion.
+                We partner with experienced developers, builders, landowners,
+                and investors by providing capital, strategic guidance, and
+                long-term investment to help move quality projects from concept
+                to completion.
               </p>
             </div>
 
@@ -209,7 +222,7 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
                 initial={{ opacity: 0, y: 30, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 30, scale: 0.95 }}
-                transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+                transition={{ type: "spring", damping: 25, stiffness: 200 }}
                 className="relative bg-white text-[#1a3929] max-w-4xl w-full max-h-[94vh] overflow-hidden shadow-2xl z-10 border border-[#1a3929]/8"
               >
                 <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#1a3929] via-[#c4a25a] to-[#1a3929] z-20" />
@@ -259,7 +272,10 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
                       </h4>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                         {selectedProject.highlights.map((highlight) => (
-                          <div key={highlight} className="flex items-start gap-3 p-3 bg-[#f3f9f4] border border-[#1a3929]/6">
+                          <div
+                            key={highlight}
+                            className="flex items-start gap-3 p-3 bg-[#f3f9f4] border border-[#1a3929]/6"
+                          >
                             <Check className="w-4 h-4 mt-0.5 text-[#c4a25a] flex-shrink-0" />
                             <span className="font-serif text-sm text-neutral-600 leading-relaxed font-light">
                               {highlight}
@@ -270,7 +286,8 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
                     </div>
                   )}
 
-                  {(selectedProject.interestTitle || selectedProject.disclaimer) && (
+                  {(selectedProject.interestTitle ||
+                    selectedProject.disclaimer) && (
                     <div className="space-y-4">
                       {selectedProject.interestTitle && (
                         <div className="bg-[#1a3929] text-white p-4 sm:p-6">
@@ -298,8 +315,12 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
                         <MapPin className="w-4 h-4" />
                       </div>
                       <div>
-                        <p className="font-sans text-[10px] text-[#c4a25a] font-bold uppercase tracking-wider">Geography</p>
-                        <p className="font-sans text-sm font-semibold text-[#1a3929]">{selectedProject.location}</p>
+                        <p className="font-sans text-[10px] text-[#c4a25a] font-bold uppercase tracking-wider">
+                          Geography
+                        </p>
+                        <p className="font-sans text-sm font-semibold text-[#1a3929]">
+                          {selectedProject.location}
+                        </p>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
@@ -307,8 +328,12 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
                         <Layers className="w-4 h-4" />
                       </div>
                       <div>
-                        <p className="font-sans text-[10px] text-[#c4a25a] font-bold uppercase tracking-wider">Sector Specification</p>
-                        <p className="font-sans text-sm font-semibold text-[#1a3929]">{selectedProject.category}</p>
+                        <p className="font-sans text-[10px] text-[#c4a25a] font-bold uppercase tracking-wider">
+                          Sector Specification
+                        </p>
+                        <p className="font-sans text-sm font-semibold text-[#1a3929]">
+                          {selectedProject.category}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -318,7 +343,9 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
                       onClick={() => setSelectedProject(null)}
                       className="relative overflow-hidden w-full sm:w-auto px-6 py-3 bg-[#1a3929] text-white font-sans text-[11px] sm:text-xs font-bold uppercase tracking-[0.18em] sm:tracking-widest transition-all cursor-pointer group"
                     >
-                      <span className="relative z-10 group-hover:text-[#1a3929] transition-colors duration-300">Acknowledge &amp; Return</span>
+                      <span className="relative z-10 group-hover:text-[#1a3929] transition-colors duration-300">
+                        Acknowledge &amp; Return
+                      </span>
                       <span className="absolute inset-0 bg-[#c4a25a] translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
                     </button>
                   </div>

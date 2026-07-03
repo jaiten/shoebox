@@ -69,15 +69,24 @@ export default function Hero({ onContactClick }: HeroProps) {
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.32, ease: [0.16, 1, 0.3, 1] }}
+            className="font-sans text-base sm:text-lg md:text-xl text-white/82 mb-4 md:mb-5 max-w-2xl leading-relaxed"
+          >
+            We back entrepreneurs the way we would want to be backed: with practical capital, aligned thinking, and a long-term view.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 28 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.38, ease: [0.16, 1, 0.3, 1] }}
             className="font-serif text-base sm:text-lg md:text-xl text-white/70 mb-8 md:mb-11 max-w-xl leading-relaxed font-light"
           >
-            Real Estate <span className="text-[#c4a25a]/60">•</span> Business Financing <span className="text-[#c4a25a]/60">•</span> Private Lending <span className="text-[#c4a25a]/60">•</span> MSP Acquisitions <span className="text-[#c4a25a]/60">•</span> Strategic Investments
+            Real Estate <span className="text-[#c4a25a]/60">&bull;</span> Business Financing <span className="text-[#c4a25a]/60">&bull;</span> Private Lending <span className="text-[#c4a25a]/60">&bull;</span> MSP Acquisitions <span className="text-[#c4a25a]/60">&bull;</span> Strategic Investments
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.42, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.9, delay: 0.48, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col sm:flex-row gap-3 sm:gap-4"
           >
             <button
