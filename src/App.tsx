@@ -7,7 +7,6 @@ import { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
-import ActiveMandates from './components/ActiveMandates';
 import BentoFocus from './components/BentoFocus';
 import Portfolio from './components/Portfolio';
 import Ethos from './components/Ethos';
@@ -36,20 +35,6 @@ export default function App() {
     }
   };
 
-  const handleScrollToProjects = () => {
-    const projectsSection = document.getElementById('projects');
-    if (projectsSection) {
-      const topOffset = 96;
-      const elementPosition = projectsSection.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.scrollY - topOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth',
-      });
-    }
-  };
-
   return (
     <div className="min-h-screen bg-[#f9f9f9] text-[#1b1b1b] font-sans antialiased overflow-x-hidden selection:bg-black selection:text-white">
       {/* Top Fixed Header Nav Bar */}
@@ -57,19 +42,15 @@ export default function App() {
 
       <main>
         {/* Parallax Hero Board */}
-        <Hero 
-          onLearnMoreClick={handleScrollToProjects} 
-          onContactClick={() => handleScrollToContact()} 
+        <Hero
+          onContactClick={(type) => handleScrollToContact(type)}
         />
 
-        {/* Active Mandates — prominent callout strip */}
-        <ActiveMandates onContactClick={(type) => handleScrollToContact(type)} />
+        {/* Service Cards — what we do, front and centre */}
+        <BentoFocus onSelectOpportunityType={(type) => handleScrollToContact(type)} />
 
         {/* Foundation Desk Overview */}
         <About />
-
-        {/* Strategic Focus Bento Grid Dashboard */}
-        <BentoFocus onSelectOpportunityType={(type) => handleScrollToContact(type)} />
 
         {/* Real Asset Highlights Section with Detail Modals */}
         <Portfolio onPartnerClick={() => handleScrollToContact('Real Estate')} />

@@ -99,7 +99,7 @@ async function startServer() {
   }
 
   app.listen(port, '0.0.0.0', () => {
-    console.log(`Shoebox Private Equity Server running on http://localhost:${port}`);
+    console.log(`Shoebox Investments server running on http://localhost:${port}`);
   });
 }
 

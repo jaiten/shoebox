@@ -9,20 +9,20 @@ import { ETHOS_DATA } from '../data';
 export default function Ethos() {
   const supportPoints = [
     {
-      title: 'INTEGRITY AND ALIGNMENT',
-      desc: 'Co-investing significant personal capital checks alongside limited partners to guarantee fully balanced incentives.',
+      title: 'SKIN IN THE GAME',
+      desc: 'We put our own capital into every deal we back, so our incentives are always aligned with yours.',
     },
     {
-      title: 'ACTIVE OWNERSHIP',
-      desc: 'Deploying expert in-house operational, engineering, and financial specialists to directly augment board execution.',
+      title: 'HANDS-ON PARTNERSHIP',
+      desc: 'We roll up our sleeves and work directly with the businesses and projects we back, not just write a check.',
     },
     {
-      title: 'CLEAR COMMUNICATION',
-      desc: 'Providing highly objective, real-time secure performance metrics with zero corporate posturing.',
+      title: 'STRAIGHT TALK',
+      desc: 'Honest answers and real numbers, with no corporate spin, exactly how we\'d want to be treated.',
     },
     {
-      title: 'GLOBAL PERSPECTIVE',
-      desc: 'Sourcing off-market real estate and technology assets through robust cross-border proprietary networks.',
+      title: 'REAL RELATIONSHIPS',
+      desc: 'Finding good opportunities in real estate, business financing, and technology through relationships built over years, not cold outreach.',
     },
   ];
 
@@ -85,7 +85,7 @@ export default function Ethos() {
               </span>
             </div>
             <h2 className="font-sans text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tight text-white mb-8 sm:mb-10 md:mb-12 leading-[1.12]">
-              The Core Principles of Capital Excellence.
+              How We Work With You.
             </h2>
 
             <div className="space-y-7 sm:space-y-8 md:space-y-10">
@@ -130,13 +130,13 @@ export default function Ethos() {
                   key={item.title}
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.3 }}
-                  className={`relative overflow-hidden rounded-[1.25rem] border shadow-[0_18px_50px_rgba(0,0,0,0.14)] flex min-h-[190px] sm:min-h-[215px] md:min-h-[250px] h-full flex-col justify-between p-5 sm:p-6 md:p-8 transition-all duration-300 group ${style.panel}`}
+                  className={`relative overflow-hidden rounded-sm border shadow-[0_18px_50px_rgba(0,0,0,0.14)] flex min-h-[190px] sm:min-h-[215px] md:min-h-[250px] h-full flex-col justify-between p-5 sm:p-6 md:p-8 transition-all duration-300 group ${style.panel}`}
                 >
                   <div
                     className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                     style={{ background: 'radial-gradient(circle at top right, rgba(255,255,255,0.12) 0%, transparent 55%)' }}
                   />
-                  <div className={`relative w-10 h-1 rounded-full mb-5 ${style.accent}`} />
+                  <div className={`relative w-10 h-1 mb-5 ${style.accent}`} />
 
                   <div className="relative flex-1 flex flex-col">
                     <span className={`font-sans text-[10px] sm:text-[11px] font-bold tracking-[0.24em] uppercase mb-3 ${style.index}`}>

@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, MapPin, Layers, Check } from 'lucide-react';
+import { X, MapPin, Layers, Check, Clock } from 'lucide-react';
 import { PROJECTS_DATA } from '../data';
 import { Project } from '../types';
 
@@ -25,18 +25,27 @@ const partnerInterests = [
 ];
 
 export default function Portfolio({ onPartnerClick }: PortfolioProps) {
-  const [activeFilter, setActiveFilter] = useState<'All' | 'Real Estate' | 'Private Lending' | 'MSP/Technology'>('All');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  const filteredProjects = PROJECTS_DATA.filter((project) => {
-    if (activeFilter === 'All') return true;
-    if (activeFilter === 'Real Estate') {
-      return project.category.includes('Residential') || project.category.includes('Land');
-    }
-    return project.category === activeFilter;
-  });
+  useEffect(() => {
+    if (!selectedProject) return;
 
-  const filters = ['All', 'Real Estate', 'Private Lending', 'MSP/Technology'] as const;
+    const previousBodyOverflow = document.body.style.overflow;
+    const previousHtmlOverflow = document.documentElement.style.overflow;
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setSelectedProject(null);
+    };
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousBodyOverflow;
+      document.documentElement.style.overflow = previousHtmlOverflow;
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [selectedProject]);
 
   return (
     <section className="py-20 md:py-32 bg-[#f9f9f9]" id="projects">
@@ -52,7 +61,7 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
             <div className="flex items-center gap-3 mb-4">
               <span className="w-6 h-[1.5px] bg-[#c4a25a]" />
               <span className="font-sans text-xs font-bold uppercase tracking-[0.25em] text-[#1a3929]">
-                Featured Development Projects
+                Current Projects
               </span>
             </div>
             <h2 className="font-sans text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tight text-[#1a3929] mb-4">
@@ -62,27 +71,11 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
               Shoebox Investments partners with experienced developers to bring high-quality residential projects to life across British Columbia, with a growing focus on opportunities in Florida, particularly the Miami market.
             </p>
           </div>
-
-          <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] sm:tracking-widest">
-            {filters.map((filter) => (
-              <button
-                key={filter}
-                onClick={() => setActiveFilter(filter)}
-                className={`px-3 sm:px-4 py-2 border-b-2 cursor-pointer transition-all duration-300 ${
-                  activeFilter === filter
-                    ? 'border-[#c4a25a] text-[#1a3929]'
-                    : 'border-transparent text-neutral-400 hover:text-[#1a3929] hover:border-[#1a3929]/20'
-                }`}
-              >
-                {filter === 'All' ? 'View All Assets' : filter}
-              </button>
-            ))}
-          </div>
         </motion.div>
 
         <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project) => (
+            {PROJECTS_DATA.map((project) => (
               <motion.div
                 layout
                 key={project.id}
@@ -124,6 +117,26 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
               </motion.div>
             ))}
           </AnimatePresence>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-10 md:mt-12 border border-dashed border-[#1a3929]/20 p-6 sm:p-8 flex items-center gap-4"
+        >
+          <div className="p-3 bg-[#f3f9f4] text-[#1a3929] rounded-full flex-shrink-0">
+            <Clock className="w-5 h-5" />
+          </div>
+          <div>
+            <span className="font-sans text-xs font-bold uppercase tracking-[0.25em] text-[#1a3929]/50 block mb-1">
+              Future Projects
+            </span>
+            <p className="font-sans text-lg sm:text-xl font-semibold text-[#1a3929]">
+              Coming Soon
+            </p>
+          </div>
         </motion.div>
 
         <motion.div

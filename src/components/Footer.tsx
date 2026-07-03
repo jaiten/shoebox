@@ -3,8 +3,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState } from 'react';
-import { Shield, ChevronUp, Info } from 'lucide-react';
+import { useState } from "react";
+import { Shield, ChevronUp, Info } from "lucide-react";
 
 interface FooterProps {
   onContactClick: () => void;
@@ -13,7 +13,8 @@ interface FooterProps {
 export default function Footer({ onContactClick }: FooterProps) {
   const [activeDisclaimer, setActiveDisclaimer] = useState<string | null>(null);
 
-  const handleScrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  const handleScrollToTop = () =>
+    window.scrollTo({ top: 0, behavior: "smooth" });
 
   const handleNavClick = (selector: string) => {
     const element = document.querySelector(selector);
@@ -21,36 +22,44 @@ export default function Footer({ onContactClick }: FooterProps) {
       const topOffset = 96;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.scrollY - topOffset;
-      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
     }
   };
 
   const legalDisclosures = {
     privacy: {
-      title: 'Privacy Statement & Compliance',
-      content: 'Shoebox Investments Inc. ("Shoebox") takes rigorous technical precautions to protect any proprietary partner, investor, or sponsor data. Any personal details, corporate opportunity messages, or contact forms submitted through this interface are encrypted server-side and stored securely. We do not distribute or share partner files/emails with unauthenticated external entities.',
+      title: "Privacy Statement",
+      content:
+        'Shoebox Investments Inc. ("Shoebox") takes reasonable precautions to protect any partner, investor, or borrower information shared with us. Any details submitted through this website\'s contact form are stored securely and are never shared with unauthenticated external parties.',
     },
     terms: {
-      title: 'Terms of Professional Engagement',
-      content: 'By navigating this application or submitting portfolio opportunity inquiries, you acknowledge that Shoebox represents a private equity, debt-holding, and venture capital syndication. Nothing contained within this website constitutes a direct public offering of securities. All active institutional partnerships are bound to strict, accredited non-disclosure agreements (NDAs) drafted pre-engagement.',
+      title: "Terms of Engagement",
+      content:
+        "By using this website or submitting an inquiry, you acknowledge that Shoebox Investments provides business financing, real estate funding, and investment partnership opportunities. Nothing on this website constitutes an offer to sell securities. Specific partnership and financing terms are agreed upon directly with our team.",
     },
     disclaimer: {
-      title: 'Regulatory & Risk Disclosures',
-      content: 'Private placements, mortgage instruments, mezzanine facilities, and venture investments involve substantial long-term risk. General past project execution metrics are not direct indicators of future capital distributions. This website is informational only and does not constitute an offer to sell securities.',
+      title: "Risk Disclosures",
+      content:
+        "Private lending, mortgage financing, real estate, and business investments all involve risk. Past project performance is not a guarantee of future results. This website is informational only and does not constitute an offer to sell securities.",
     },
     login: {
-      title: 'Secure LP Portal Access',
-      content: 'The Shoebox Limited Partner Portal is a multi-factor authenticated interface reserved strictly for active institutional investment accounts. If you are an existing stakeholder hoping to access deal books, monthly draw downs, or tax K-1 filings, please coordinate access configurations directly with your designated GP contact.',
+      title: "Partner Portal Access",
+      content:
+        "Our partner portal is reserved for active investment and financing partners. If you're an existing partner looking for updates on your deal, please reach out directly to your Shoebox contact.",
     },
   };
 
-  const linkClass = 'text-left text-xs font-semibold text-[#8fbc9e] hover:text-white transition-colors duration-200';
+  const linkClass =
+    "text-left text-xs font-semibold text-[#8fbc9e] hover:text-white transition-colors duration-200";
 
   return (
     <footer className="bg-[#1a3929] text-white relative overflow-hidden">
       <div
         className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full pointer-events-none opacity-50"
-        style={{ background: 'radial-gradient(circle, rgba(196,162,90,0.06) 0%, transparent 70%)' }}
+        style={{
+          background:
+            "radial-gradient(circle, rgba(196,162,90,0.06) 0%, transparent 70%)",
+        }}
         aria-hidden="true"
       />
       <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#1a3929] via-[#c4a25a] to-[#1a3929]" />
@@ -64,7 +73,9 @@ export default function Footer({ onContactClick }: FooterProps) {
             SHOEBOX INVESTMENTS
           </button>
           <p className="font-serif text-sm md:text-base text-[#8fbc9e] leading-relaxed font-light">
-            A disciplined approach to capital accumulation and growth. We specialize in identifying and actively managing high-yield real estate, structured credit facilities, and private technology roll-ups across North America.
+            An entrepreneur-led investment company. We help businesses get
+            financing, fund real estate opportunities, and partner with
+            entrepreneurs, developers, and business owners across North America.
           </p>
 
           <div className="mt-8 w-12 h-[1.5px] bg-gradient-to-r from-[#c4a25a] to-transparent" />
@@ -72,36 +83,80 @@ export default function Footer({ onContactClick }: FooterProps) {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-8 font-sans w-full md:w-auto">
           <div className="flex flex-col gap-4">
-            <span className="text-xs font-bold uppercase tracking-widest text-white">Company</span>
-            <button onClick={() => handleNavClick('#about')} className={linkClass}>About Foundation</button>
-            <button onClick={() => handleNavClick('#focus')} className={linkClass}>Investment Focus</button>
-            <button onClick={() => handleNavClick('#philosophy')} className={linkClass}>Philosophy &amp; Ethos</button>
+            <span className="text-xs font-bold uppercase tracking-widest text-white">
+              Company
+            </span>
+            <button
+              onClick={() => handleNavClick("#about")}
+              className={linkClass}
+            >
+              Why Shoebox?
+            </button>
+            <button
+              onClick={() => handleNavClick("#focus")}
+              className={linkClass}
+            >
+              What We Do
+            </button>
+            <button
+              onClick={() => handleNavClick("#philosophy")}
+              className={linkClass}
+            >
+              How We Work
+            </button>
           </div>
 
           <div className="flex flex-col gap-4">
-            <span className="text-xs font-bold uppercase tracking-widest text-white">Connect</span>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={linkClass}>LinkedIn</a>
-            <button onClick={() => setActiveDisclaimer('login')} className={linkClass}>Investor Login</button>
-            <button onClick={onContactClick} className={linkClass}>Contact GP</button>
+            <span className="text-xs font-bold uppercase tracking-widest text-white">
+              Connect
+            </span>
+            <button
+              onClick={() => setActiveDisclaimer("login")}
+              className={linkClass}
+            >
+              Partner Login
+            </button>
+            <button onClick={onContactClick} className={linkClass}>
+              Contact Us
+            </button>
           </div>
 
           <div className="flex flex-col gap-4">
-            <span className="text-xs font-bold uppercase tracking-widest text-white">Legal Disclosures</span>
-            <button onClick={() => setActiveDisclaimer('privacy')} className={`${linkClass} hover:underline underline-offset-4`}>Privacy Policy</button>
-            <button onClick={() => setActiveDisclaimer('terms')} className={`${linkClass} hover:underline underline-offset-4`}>Terms of Service</button>
-            <button onClick={() => setActiveDisclaimer('disclaimer')} className={`${linkClass} hover:underline underline-offset-4`}>Structured Disclosures</button>
+            <span className="text-xs font-bold uppercase tracking-widest text-white">
+              Legal Disclosures
+            </span>
+            <button
+              onClick={() => setActiveDisclaimer("privacy")}
+              className={`${linkClass} hover:underline underline-offset-4`}
+            >
+              Privacy Policy
+            </button>
+            <button
+              onClick={() => setActiveDisclaimer("terms")}
+              className={`${linkClass} hover:underline underline-offset-4`}
+            >
+              Terms of Service
+            </button>
+            <button
+              onClick={() => setActiveDisclaimer("disclaimer")}
+              className={`${linkClass} hover:underline underline-offset-4`}
+            >
+              Risk Disclosures
+            </button>
           </div>
         </div>
       </div>
 
       <div className="border-t border-white/10 py-8 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left relative">
         <p className="font-sans text-[10px] sm:text-[11px] text-[#6b9e7a] tracking-[0.16em] sm:tracking-wider font-semibold">
-          &copy; {new Date().getFullYear()} Shoebox Investments Inc. All Rights Reserved. Informational materials only. Not an offer to sell securities.
+          &copy; {new Date().getFullYear()} Shoebox Investments Inc. All Rights
+          Reserved. Informational materials only. Not an offer to sell
+          securities.
         </p>
 
         <div className="flex gap-6 items-center">
           <button
-            onClick={() => setActiveDisclaimer('disclaimer')}
+            onClick={() => setActiveDisclaimer("disclaimer")}
             className="text-[#6b9e7a] hover:text-[#c4a25a] transition-colors duration-200"
             title="Registered Protection Status"
           >
@@ -109,7 +164,10 @@ export default function Footer({ onContactClick }: FooterProps) {
           </button>
           <a
             href="#"
-            onClick={(e) => { e.preventDefault(); handleScrollToTop(); }}
+            onClick={(e) => {
+              e.preventDefault();
+              handleScrollToTop();
+            }}
             className="p-2 border border-[#c4a25a]/30 rounded-full hover:border-[#c4a25a] text-[#6b9e7a] hover:text-[#c4a25a] transition-all duration-200"
             title="Scroll back to header"
           >
@@ -130,18 +188,28 @@ export default function Footer({ onContactClick }: FooterProps) {
             <div className="flex gap-3 items-center mb-4 border-b border-[#1a3929]/10 pb-3">
               <Info className="w-5 h-5 text-[#c4a25a]" />
               <h3 className="font-sans font-bold text-sm tracking-widest uppercase text-[#1a3929]">
-                {legalDisclosures[activeDisclaimer as keyof typeof legalDisclosures].title}
+                {
+                  legalDisclosures[
+                    activeDisclaimer as keyof typeof legalDisclosures
+                  ].title
+                }
               </h3>
             </div>
             <p className="font-serif text-neutral-600 text-sm leading-relaxed mb-6 font-light">
-              {legalDisclosures[activeDisclaimer as keyof typeof legalDisclosures].content}
+              {
+                legalDisclosures[
+                  activeDisclaimer as keyof typeof legalDisclosures
+                ].content
+              }
             </p>
             <div className="flex justify-end">
               <button
                 onClick={() => setActiveDisclaimer(null)}
                 className="relative overflow-hidden px-5 py-2.5 bg-[#1a3929] text-white font-sans text-[10px] font-bold uppercase tracking-wider transition-colors group cursor-pointer"
               >
-                <span className="relative z-10 group-hover:text-[#1a3929] transition-colors duration-300">Acknowledge</span>
+                <span className="relative z-10 group-hover:text-[#1a3929] transition-colors duration-300">
+                  Acknowledge
+                </span>
                 <span className="absolute inset-0 bg-[#c4a25a] translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
               </button>
             </div>

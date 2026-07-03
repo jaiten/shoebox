@@ -18,14 +18,13 @@ export default function ContactForm({ selectedType, onClearType }: ContactFormPr
     name: '',
     company: '',
     email: '',
-    opportunityType: 'Real Estate',
+    opportunityType: 'Business Financing',
     message: '',
   });
 
   useEffect(() => {
     if (selectedType) {
-      const optionType = selectedType === 'Venture Capital' ? 'Other Investment' : selectedType;
-      setFormData((prev) => ({ ...prev, opportunityType: optionType as any }));
+      setFormData((prev) => ({ ...prev, opportunityType: selectedType as any }));
     }
   }, [selectedType]);
 
@@ -68,7 +67,7 @@ export default function ContactForm({ selectedType, onClearType }: ContactFormPr
   };
 
   const handleResetForm = () => {
-    setFormData({ name: '', company: '', email: '', opportunityType: 'Real Estate', message: '' });
+    setFormData({ name: '', company: '', email: '', opportunityType: 'Business Financing', message: '' });
     setSuccessMessage(null);
     setErrorString(null);
     onClearType();
@@ -95,10 +94,10 @@ export default function ContactForm({ selectedType, onClearType }: ContactFormPr
                 </span>
               </div>
               <h2 className="font-sans text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tight text-[#1a3929] mb-6 md:mb-8 leading-[1.15]">
-                Discuss a Strategic Opportunity.
+                Let&apos;s Start a Conversation.
               </h2>
               <p className="font-serif text-neutral-500 text-sm md:text-base leading-relaxed mb-10 md:mb-12 font-light">
-                We are actively seeking ground-level development partnerships, short-term lending opportunities, and MSP acquisition conversations. Complete the opportunity form to start a direct review with our team.
+                Whether you need business financing, are funding a real estate project, want to become an investment partner, or are ready to sell your MSP, we&apos;d love to hear from you.
               </p>
             </div>
 
@@ -144,7 +143,7 @@ export default function ContactForm({ selectedType, onClearType }: ContactFormPr
                   <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#1a3929] via-[#c4a25a] to-[#1a3929]" />
 
                   <h3 className="font-sans text-sm font-semibold tracking-widest uppercase text-[#1a3929] border-b border-[#1a3929]/10 pb-3 block">
-                    OPPORTUNITY SUBMISSION FORM
+                    TELL US ABOUT YOUR OPPORTUNITY
                   </h3>
 
                   {errorString && (
@@ -163,9 +162,9 @@ export default function ContactForm({ selectedType, onClearType }: ContactFormPr
                     </div>
                     <div>
                       <label className="font-sans text-[10px] font-bold uppercase tracking-wider mb-2 block text-[#1a3929]/60">
-                        Company / Syndicate
+                        Company
                       </label>
-                      <input type="text" name="company" value={formData.company} onChange={handleInputChange} placeholder="Alpha Holdings Inc." className={inputClass} disabled={loading} />
+                      <input type="text" name="company" value={formData.company} onChange={handleInputChange} placeholder="Your Company Inc." className={inputClass} disabled={loading} />
                     </div>
                   </div>
 
@@ -178,26 +177,26 @@ export default function ContactForm({ selectedType, onClearType }: ContactFormPr
                     </div>
                     <div>
                       <label className="font-sans text-[10px] font-bold uppercase tracking-wider mb-2 block text-[#1a3929]/60">
-                        Opportunity Sector Focus
+                        How Can We Help?
                       </label>
                       <select name="opportunityType" value={formData.opportunityType} onChange={handleInputChange} className={`${inputClass} cursor-pointer`} disabled={loading}>
-                        <option value="Real Estate">Real Estate Partnerships</option>
-                        <option value="Private Lending">Private Lending / Credit</option>
-                        <option value="MSP/Technology">MSP / Technology Roll-up</option>
-                        <option value="Other Investment">Venture Capital / Other</option>
+                        <option value="Business Financing">Business Financing</option>
+                        <option value="Real Estate">Real Estate Funding</option>
+                        <option value="MSP/Technology">Sell Your MSP</option>
+                        <option value="Other Investment">Become an Investment Partner</option>
                       </select>
                     </div>
                   </div>
 
                   <div>
                     <label className="font-sans text-[10px] font-bold uppercase tracking-wider mb-2 block text-[#1a3929]/60">
-                      Opportunity Description &amp; Proposed Message <span className="font-normal">*</span>
+                      Tell Us More <span className="font-normal">*</span>
                     </label>
                     <textarea
                       name="message"
                       value={formData.message}
                       onChange={handleInputChange}
-                      placeholder="Outline your proposal location, estimated capitalization size, current equity structure, and anticipated cash flow/exit horizons..."
+                      placeholder="Tell us a bit about your business, project, or opportunity..."
                       rows={4}
                       className={`${inputClass} resize-none`}
                       required

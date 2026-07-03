@@ -65,7 +65,7 @@ export default function Header({ onPartnerClick }: HeaderProps) {
         <div className="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full h-full gap-3">
           <a
             href="#"
-            className="h-16 w-[16rem] sm:h-[4.5rem] sm:w-[22rem] md:h-[6.5rem] md:w-[36rem] flex items-center justify-center overflow-hidden select-none transition-opacity hover:opacity-80 shrink-0"
+            className="w-72 sm:w-96 xl:w-[38rem] aspect-[380/61] flex items-center justify-center select-none transition-opacity hover:opacity-80 shrink-0"
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
             aria-label="Shoebox Investments"
           >
@@ -77,7 +77,7 @@ export default function Header({ onPartnerClick }: HeaderProps) {
             />
           </a>
 
-          <div className="hidden md:flex items-center gap-10">
+          <div className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) => (
               <button
                 key={link.name}
@@ -98,7 +98,7 @@ export default function Header({ onPartnerClick }: HeaderProps) {
           </div>
 
           <button
-            className="md:hidden text-[#1A3929] p-2 shrink-0"
+            className="lg:hidden text-[#1A3929] p-2 shrink-0"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle Menu"
           >
@@ -113,7 +113,7 @@ export default function Header({ onPartnerClick }: HeaderProps) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.2 }}
-              className="md:hidden absolute top-22 left-0 w-full bg-white border-b border-[#1A3929]/10 shadow-lg z-40 py-5 px-4 sm:px-6"
+              className="lg:hidden absolute top-22 md:top-28 left-0 w-full bg-white border-b border-[#1A3929]/10 shadow-lg z-40 py-5 px-4 sm:px-6"
             >
               <div className="flex flex-col gap-4">
                 {navLinks.map((link, i) => (
