@@ -72,7 +72,7 @@ export default function App() {
         <BentoFocus onSelectOpportunityType={(type) => handleScrollToContact(type)} />
 
         {/* Real Asset Highlights Section with Detail Modals */}
-        <Portfolio />
+        <Portfolio onPartnerClick={() => handleScrollToContact('Real Estate')} />
 
         {/* Core Principles contrasting workspace */}
         <Ethos />

@@ -19,13 +19,13 @@ export default function ContactForm({ selectedType, onClearType }: ContactFormPr
     company: '',
     email: '',
     opportunityType: 'Real Estate',
-    message: ''
+    message: '',
   });
 
   useEffect(() => {
     if (selectedType) {
       const optionType = selectedType === 'Venture Capital' ? 'Other Investment' : selectedType;
-      setFormData(prev => ({ ...prev, opportunityType: optionType as any }));
+      setFormData((prev) => ({ ...prev, opportunityType: optionType as any }));
     }
   }, [selectedType]);
 
@@ -35,7 +35,7 @@ export default function ContactForm({ selectedType, onClearType }: ContactFormPr
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e: { preventDefault(): void }) => {
@@ -74,14 +74,12 @@ export default function ContactForm({ selectedType, onClearType }: ContactFormPr
     onClearType();
   };
 
-  const inputClass = "w-full bg-transparent border-0 border-b border-neutral-200 focus:border-[#1a3929] focus:ring-0 py-2.5 px-0 font-serif text-sm transition-colors duration-300 outline-none";
+  const inputClass = 'w-full bg-transparent border-0 border-b border-neutral-200 focus:border-[#1a3929] focus:ring-0 py-2.5 px-0 font-serif text-sm transition-colors duration-300 outline-none';
 
   return (
-    <section className="py-24 md:py-32 bg-white border-t border-black/5" id="contact">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24">
-
-          {/* Left — Info */}
+    <section className="py-20 md:py-32 bg-white border-t border-black/5" id="contact">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-24">
           <motion.div
             initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -96,23 +94,23 @@ export default function ContactForm({ selectedType, onClearType }: ContactFormPr
                   CONTACT
                 </span>
               </div>
-              <h2 className="font-sans text-3xl md:text-5xl font-semibold tracking-tight text-[#1a3929] mb-8 leading-[1.15]">
+              <h2 className="font-sans text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tight text-[#1a3929] mb-6 md:mb-8 leading-[1.15]">
                 Discuss a Strategic Opportunity.
               </h2>
-              <p className="font-serif text-neutral-500 text-sm md:text-base leading-relaxed mb-12 font-light">
-                We are always seeking investment opportunities, innovative developers, and syndication partners that align with our long-term preservation-driven philosophy. Complete the opportunity form to initiate a GP review.
+              <p className="font-serif text-neutral-500 text-sm md:text-base leading-relaxed mb-10 md:mb-12 font-light">
+                We are actively seeking ground-level development partnerships, short-term lending opportunities, and MSP acquisition conversations. Complete the opportunity form to start a direct review with our team.
               </p>
             </div>
 
             <div className="space-y-6 pt-6 border-t border-[#1a3929]/10">
               <p className="font-sans text-xs font-bold uppercase tracking-widest text-[#1a3929]">
-                Regional General Partner Offices
+                Head Office &amp; Market Focus
               </p>
               <div className="grid grid-cols-1 gap-5 font-serif text-xs text-neutral-500 font-light">
                 {[
-                  { region: 'WESTERN CANADA', city: 'Vancouver, BC, Canada'      },
-                  { region: 'EASTERN CANADA', city: 'Toronto, ON, Canada'        },
-                  { region: 'UNITED STATES',  city: 'Miami, FL, United States'   },
+                  { region: 'HEAD OFFICE', city: 'Vancouver, BC, Canada' },
+                  { region: 'REAL ESTATE', city: 'British Columbia, Lower Mainland, Greater Victoria, GTA, and Miami' },
+                  { region: 'MSP ACQUISITIONS', city: 'Vancouver, Toronto, Miami, New York, and Los Angeles' },
                 ].map((office) => (
                   <div key={office.region} className="flex items-start gap-3 group">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#c4a25a] mt-1 flex-shrink-0 opacity-70 group-hover:opacity-100 transition-opacity" />
@@ -126,7 +124,6 @@ export default function ContactForm({ selectedType, onClearType }: ContactFormPr
             </div>
           </motion.div>
 
-          {/* Right — Form */}
           <motion.div
             initial={{ opacity: 0, x: 24 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -142,9 +139,8 @@ export default function ContactForm({ selectedType, onClearType }: ContactFormPr
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0 }}
                   onSubmit={handleSubmit}
-                  className="space-y-8 bg-[#f3f9f4] p-8 md:p-14 border border-[#1a3929]/10 shadow-sm relative overflow-hidden"
+                  className="space-y-8 bg-[#f3f9f4] p-5 sm:p-6 md:p-14 border border-[#1a3929]/10 shadow-sm relative overflow-hidden"
                 >
-                  {/* Green-to-gold top border */}
                   <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#1a3929] via-[#c4a25a] to-[#1a3929]" />
 
                   <h3 className="font-sans text-sm font-semibold tracking-widest uppercase text-[#1a3929] border-b border-[#1a3929]/10 pb-3 block">
@@ -158,37 +154,33 @@ export default function ContactForm({ selectedType, onClearType }: ContactFormPr
                     </div>
                   )}
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                     <div>
                       <label className="font-sans text-[10px] font-bold uppercase tracking-wider mb-2 block text-[#1a3929]/60">
                         Full Name <span className="font-normal">*</span>
                       </label>
-                      <input type="text" name="name" value={formData.name} onChange={handleInputChange}
-                        placeholder="John Doe" className={inputClass} required disabled={loading} />
+                      <input type="text" name="name" value={formData.name} onChange={handleInputChange} placeholder="John Doe" className={inputClass} required disabled={loading} />
                     </div>
                     <div>
                       <label className="font-sans text-[10px] font-bold uppercase tracking-wider mb-2 block text-[#1a3929]/60">
                         Company / Syndicate
                       </label>
-                      <input type="text" name="company" value={formData.company} onChange={handleInputChange}
-                        placeholder="Alpha Holdings Inc." className={inputClass} disabled={loading} />
+                      <input type="text" name="company" value={formData.company} onChange={handleInputChange} placeholder="Alpha Holdings Inc." className={inputClass} disabled={loading} />
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                     <div>
                       <label className="font-sans text-[10px] font-bold uppercase tracking-wider mb-2 block text-[#1a3929]/60">
                         Email Address <span className="font-normal">*</span>
                       </label>
-                      <input type="email" name="email" value={formData.email} onChange={handleInputChange}
-                        placeholder="johndoe@email.com" className={inputClass} required disabled={loading} />
+                      <input type="email" name="email" value={formData.email} onChange={handleInputChange} placeholder="johndoe@email.com" className={inputClass} required disabled={loading} />
                     </div>
                     <div>
                       <label className="font-sans text-[10px] font-bold uppercase tracking-wider mb-2 block text-[#1a3929]/60">
                         Opportunity Sector Focus
                       </label>
-                      <select name="opportunityType" value={formData.opportunityType} onChange={handleInputChange}
-                        className={`${inputClass} cursor-pointer`} disabled={loading}>
+                      <select name="opportunityType" value={formData.opportunityType} onChange={handleInputChange} className={`${inputClass} cursor-pointer`} disabled={loading}>
                         <option value="Real Estate">Real Estate Partnerships</option>
                         <option value="Private Lending">Private Lending / Credit</option>
                         <option value="MSP/Technology">MSP / Technology Roll-up</option>
@@ -201,9 +193,16 @@ export default function ContactForm({ selectedType, onClearType }: ContactFormPr
                     <label className="font-sans text-[10px] font-bold uppercase tracking-wider mb-2 block text-[#1a3929]/60">
                       Opportunity Description &amp; Proposed Message <span className="font-normal">*</span>
                     </label>
-                    <textarea name="message" value={formData.message} onChange={handleInputChange}
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
                       placeholder="Outline your proposal location, estimated capitalization size, current equity structure, and anticipated cash flow/exit horizons..."
-                      rows={4} className={`${inputClass} resize-none`} required disabled={loading} />
+                      rows={4}
+                      className={`${inputClass} resize-none`}
+                      required
+                      disabled={loading}
+                    />
                   </div>
 
                   <button
@@ -223,7 +222,7 @@ export default function ContactForm({ selectedType, onClearType }: ContactFormPr
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0 }}
-                  className="bg-[#1a3929] text-white p-8 md:p-12 border border-[#c4a25a]/20 shadow-xl space-y-8 font-sans relative overflow-hidden"
+                  className="bg-[#1a3929] text-white p-5 sm:p-6 md:p-12 border border-[#c4a25a]/20 shadow-xl space-y-8 font-sans relative overflow-hidden"
                 >
                   <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#c4a25a] via-[#d4b472] to-[#c4a25a]" />
                   <div className="space-y-4 border-b border-white/15 pb-6">
@@ -250,7 +249,6 @@ export default function ContactForm({ selectedType, onClearType }: ContactFormPr
               )}
             </AnimatePresence>
           </motion.div>
-
         </div>
       </div>
     </section>

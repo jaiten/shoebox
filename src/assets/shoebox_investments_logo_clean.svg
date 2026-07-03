@@ -1,22 +1,40 @@
-<svg width="100%" viewBox="0 0 680 200" role="img" xmlns="http://www.w3.org/2000/svg" style="">
-  <title style="fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Shoebox Investments Inc logo</title>
-  <desc style="fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Minimal wordmark logo with geometric square mark and company name</desc>
+<svg width="100%" viewBox="0 0 760 160" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>Shoebox Investments Inc logo</title>
+  <desc>Minimal wordmark logo with geometric square mark and company name</desc>
 
-  <defs>
-    
-  </defs>
+  <g transform="translate(18 22)">
+    <rect x="0" y="0" width="78" height="78" rx="2" fill="none" stroke="#FAF9F5" stroke-width="2.25"/>
+    <rect x="12" y="12" width="21" height="21" rx="1" fill="#FAF9F5"/>
+    <rect x="45" y="12" width="21" height="21" rx="1" fill="#FAF9F5"/>
+    <rect x="12" y="45" width="21" height="21" rx="1" fill="#FAF9F5"/>
+    <rect x="45" y="45" width="21" height="21" rx="1" fill="#FAF9F5" opacity="0.3"/>
 
-  <g transform="translate(160, 78)" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-    <rect x="0" y="0" width="44" height="44" rx="2" style="fill:none;stroke:rgb(250, 249, 245);color:rgb(255, 255, 255);stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-    <rect x="9" y="9" width="11" height="11" rx="1" style="fill:rgb(250, 249, 245);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-    <rect x="24" y="9" width="11" height="11" rx="1" style="fill:rgb(250, 249, 245);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-    <rect x="9" y="24" width="11" height="11" rx="1" style="fill:rgb(250, 249, 245);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-    <rect x="24" y="24" width="11" height="11" rx="1" style="opacity:0.3;fill:rgb(250, 249, 245);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.3;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <line x1="92" y1="0" x2="92" y2="78" stroke="rgba(222, 220, 209, 0.75)" stroke-width="1"/>
 
-    <line x1="62" y1="6" x2="62" y2="38" style="fill:rgb(0, 0, 0);stroke:rgba(222, 220, 209, 0.3);color:rgb(255, 255, 255);stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-
-    <text x="78" y="34" style="fill:rgb(250, 249, 245);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Georgia, &quot;Times New Roman&quot;, serif;font-size:36px;font-weight:400;text-anchor:start;dominant-baseline:auto">SHOEBOX</text>
-    <text x="79" y="56" style="fill:rgb(194, 192, 182);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:-apple-system, &quot;Helvetica Neue&quot;, Arial, sans-serif;font-size:11px;font-weight:400;text-anchor:start;dominant-baseline:auto">INVESTMENTS INC</text>
+    <text
+      x="112"
+      y="45"
+      fill="#FAF9F5"
+      font-family="Georgia, 'Times New Roman', serif"
+      font-size="42"
+      font-weight="400"
+      textLength="252"
+      lengthAdjust="spacingAndGlyphs"
+    >
+      SHOEBOX
+    </text>
+    <text
+      x="112"
+      y="72"
+      fill="#C2C0B6"
+      font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif"
+      font-size="12"
+      font-weight="500"
+      letter-spacing="4"
+      textLength="252"
+      lengthAdjust="spacingAndGlyphs"
+    >
+      INVESTMENTS INC
+    </text>
   </g>
-
 </svg>

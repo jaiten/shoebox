@@ -30,8 +30,8 @@ export default function Header({ onPartnerClick }: HeaderProps) {
   }, []);
 
   const navLinks = [
-    { name: 'Focus',      href: '#focus'      },
-    { name: 'Projects',   href: '#projects'   },
+    { name: 'Focus', href: '#focus' },
+    { name: 'Projects', href: '#projects' },
     { name: 'Philosophy', href: '#philosophy' },
   ];
 
@@ -48,7 +48,6 @@ export default function Header({ onPartnerClick }: HeaderProps) {
 
   return (
     <>
-      {/* Scroll progress — green-to-gold gradient */}
       <div
         className="scroll-progress"
         style={{ width: `${scrollProgress}%` }}
@@ -56,31 +55,28 @@ export default function Header({ onPartnerClick }: HeaderProps) {
       />
 
       <nav
-        className={`fixed top-0 w-full h-24 z-50 transition-all duration-500 ${
+        className={`fixed top-0 w-full h-22 md:h-28 z-50 transition-all duration-500 ${
           scrolled
             ? 'bg-white/98 backdrop-blur-lg shadow-[0_2px_32px_rgba(26,57,41,0.08)] border-b border-[#1A3929]/8'
             : 'bg-white/95 backdrop-blur-md border-b border-black/5'
         }`}
         id="headerNav"
       >
-        <div className="flex justify-between items-center max-w-7xl mx-auto px-6 md:px-12 w-full h-full">
-
-          {/* Brand Logo — larger container */}
+        <div className="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full h-full gap-3">
           <a
             href="#"
-            className="h-20 w-64 md:h-22 md:w-80 flex items-center justify-center overflow-hidden select-none transition-opacity hover:opacity-80"
+            className="h-16 w-[16rem] sm:h-[4.5rem] sm:w-[22rem] md:h-[6.5rem] md:w-[36rem] flex items-center justify-center overflow-hidden select-none transition-opacity hover:opacity-80 shrink-0"
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
             aria-label="Shoebox Investments"
           >
             <img
               src={logoUrl}
               alt=""
-              className="h-full w-full object-contain scale-[2.0]"
+              className="h-full w-full object-contain"
               aria-hidden="true"
             />
           </a>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-10">
             {navLinks.map((link) => (
               <button
@@ -89,7 +85,6 @@ export default function Header({ onPartnerClick }: HeaderProps) {
                 className="relative group font-sans text-sm font-semibold tracking-wider text-neutral-500 hover:text-[#1A3929] transition-colors duration-300 uppercase cursor-pointer py-1"
               >
                 {link.name}
-                {/* Gold underline on hover */}
                 <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-[#c4a25a] group-hover:w-full transition-all duration-300" />
               </button>
             ))}
@@ -102,9 +97,8 @@ export default function Header({ onPartnerClick }: HeaderProps) {
             </button>
           </div>
 
-          {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden text-[#1A3929] p-2"
+            className="md:hidden text-[#1A3929] p-2 shrink-0"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle Menu"
           >
@@ -112,7 +106,6 @@ export default function Header({ onPartnerClick }: HeaderProps) {
           </button>
         </div>
 
-        {/* Mobile Drawer */}
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -120,7 +113,7 @@ export default function Header({ onPartnerClick }: HeaderProps) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.2 }}
-              className="md:hidden absolute top-24 left-0 w-full bg-white border-b border-[#1A3929]/10 shadow-lg z-40 py-6 px-6"
+              className="md:hidden absolute top-22 left-0 w-full bg-white border-b border-[#1A3929]/10 shadow-lg z-40 py-5 px-4 sm:px-6"
             >
               <div className="flex flex-col gap-4">
                 {navLinks.map((link, i) => (

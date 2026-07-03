@@ -6,10 +6,15 @@
 export interface Project {
   id: string;
   title: string;
+  subtitle?: string;
   category: string;
   description: string;
   imageUrl: string;
   location: string;
+  highlights?: string[];
+  interestTitle?: string;
+  interestText?: string;
+  disclaimer?: string;
   link?: string;
 }
 

@@ -9,6 +9,7 @@ import aboutImage from './assets/about-boardroom.png';
 import residentialDevelopmentImage from './assets/residential-development.png';
 import landDevelopmentImage from './assets/land-development.png';
 import creditTechnologyImage from './assets/credit-technology.png';
+import deltaTownhomeImage from './assets/delta-townhome-community.png';
 
 export const HERO_IMAGE = heroImage;
 
@@ -18,36 +19,73 @@ export const REAL_ESTATE_IMAGE = residentialDevelopmentImage;
 
 export const PROJECTS_DATA: Project[] = [
   {
-    id: 'north-delta',
-    title: 'North Delta Development Project',
+    id: 'delta-townhome-community',
+    title: 'Delta Townhome Community',
+    subtitle: '65 Contemporary Townhomes | Delta, BC',
     category: 'Residential Development',
-    description: 'Multi-unit spacious townhouses in a highly desirable family-oriented neighborhood. Close to all amenities including schools, shopping, and highway infrastructure. Features modern sustainable amenities, highly efficient layout designs, and exceptional transit accessibility. Developed to provide high-density housing with long-term capital appreciation.',
-    imageUrl: residentialDevelopmentImage,
-    location: 'Canada'
+    description: 'Shoebox Investments is a proud investment partner in a planned 65-unit townhouse community in Delta. Designed for modern family living, the development features spacious homes ranging from approximately 1,100 to 1,900 sq. ft., contemporary architecture, underground parking, and landscaped amenity spaces.',
+    imageUrl: deltaTownhomeImage,
+    location: 'Delta, BC',
+    highlights: [
+      '65 contemporary townhomes',
+      'Approximately 1,100-1,900 sq. ft.',
+      'Primarily 3 and 4-bedroom homes',
+      'Underground parking',
+      'Landscaped community amenities',
+      'Family-oriented neighbourhood',
+      'Convenient access to schools, parks, shopping, and transit',
+    ],
+    interestTitle: 'Interested in purchasing a home?',
+    interestText: 'Register your interest to receive updates on pricing, floor plans, and availability.',
+    disclaimer: 'Conceptual project information. Sizes, layouts, pricing, and completion dates are subject to change pending final approvals.',
   },
   {
-    id: 'victoria-subdivision',
-    title: 'Victoria Subdivision Project',
+    id: 'langford-estate-lots',
+    title: 'Langford Estate Lots',
+    subtitle: 'Premium Estate Lot Development | Greater Victoria, BC',
     category: 'Land Development',
-    description: 'Multi-acre lots rural style subdivision consisting of single-family building lots with view potential. Easy highway access and close to town centres.',
+    description: 'Shoebox Investments is participating in the transformation of a 14-acre property in Langford into a limited collection of premium estate-sized residential lots. Designed for buyers seeking privacy, space, and a custom home lifestyle, these properties offer the opportunity to build in a peaceful natural setting while remaining close to Greater Victoria.',
     imageUrl: landDevelopmentImage,
-    location: 'Canada'
+    location: 'Greater Victoria, BC',
+    highlights: [
+      'Approximately five premium estate lots',
+      'Approximately 2 acres per lot',
+      'Rural setting with natural surroundings',
+      'Potential water views',
+      'Ideal for custom homes',
+      'Minutes from Greater Victoria',
+    ],
+    interestTitle: 'Interested in one of these lots?',
+    interestText: 'Register your interest to receive updates as the subdivision progresses.',
+    disclaimer: 'Project details are subject to final subdivision approval and may change.',
   },
   {
     id: 'vancouver-private-credit',
-    title: 'Metro Vancouver Mezzanine Credit',
+    title: 'Private Lending',
+    subtitle: '12%+/annum Short-Term Real Estate Financing',
     category: 'Private Lending',
     description: 'Private lending at 12%/annum for short term financing of real estate projects in the Lower Mainland and GTA. Secure first/second mortgage lending solutions for individual and institutional property developers.',
     imageUrl: creditTechnologyImage,
-    location: 'Canada'
+    location: 'Lower Mainland + GTA',
+    highlights: [
+      'Short-term bridge financing',
+      'Secure first and second mortgage structures',
+      'Institutional and individual property developers',
+    ],
   },
   {
-    id: 'toronto-msp-rollup',
-    title: 'Ontario Enterprise Tech Partners II',
+    id: 'tech-partnerships',
+    title: 'Tech Partnerships',
+    subtitle: 'MSP & MSSP Acquisition Mandate',
     category: 'MSP/Technology',
-    description: 'Strategic equity purchases of small and midsize Managed Service Providers. MSP role is the delivery of predictive cybersecurity services, AI services, and support services.',
+    description: 'Strategic equity purchases of small and midsize Managed Service Providers and MSSPs in key areas of Vancouver, Toronto, Miami, New York, and Los Angeles. We are searching for MSPs from $500K to $1.5M in ARR to acquire.',
     imageUrl: creditTechnologyImage,
-    location: 'Canada'
+    location: 'North America',
+    highlights: [
+      'Target ARR range of $500K to $1.5M',
+      'Predictive cybersecurity services',
+      'AI services and support services',
+    ],
   }
 ];
 
