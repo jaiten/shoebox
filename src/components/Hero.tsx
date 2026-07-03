@@ -11,6 +11,16 @@ interface HeroProps {
 }
 
 export default function Hero({ onContactClick }: HeroProps) {
+  const handleViewProjects = () => {
+    const element = document.querySelector('#projects');
+    if (element) {
+      const topOffset = 96;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - topOffset;
+      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative min-h-[90vh] md:min-h-screen flex flex-col pt-20 md:pt-24 overflow-hidden bg-[#0e2116]">
       <div className="absolute inset-0 z-0">
@@ -78,10 +88,10 @@ export default function Hero({ onContactClick }: HeroProps) {
               <span className="absolute inset-0 bg-[#1a3929] translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
             </button>
             <button
-              onClick={() => onContactClick('MSP/Technology')}
+              onClick={handleViewProjects}
               className="w-full sm:w-auto px-6 sm:px-10 py-4 sm:py-5 border border-[#c4a25a]/40 text-white font-sans text-[11px] sm:text-xs font-bold uppercase tracking-[0.18em] sm:tracking-widest text-center backdrop-blur-sm transition-all duration-300 hover:border-[#c4a25a] hover:bg-[#c4a25a]/10 hover:text-[#d4b472] active:scale-95 cursor-pointer"
             >
-              Sell Your MSP
+              See Our Projects
             </button>
           </motion.div>
         </div>

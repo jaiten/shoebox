@@ -6,7 +6,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import logoUrl from '../assets/shoebox_investments_logo_whitebg.svg';
+import Logo from './Logo';
 
 interface HeaderProps {
   onPartnerClick: () => void;
@@ -62,19 +62,14 @@ export default function Header({ onPartnerClick }: HeaderProps) {
         }`}
         id="headerNav"
       >
-        <div className="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full h-full gap-3">
+        <div className="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full h-full gap-2 sm:gap-3">
           <a
             href="#"
-            className="w-72 sm:w-96 xl:w-[38rem] aspect-[380/61] flex items-center justify-center select-none transition-opacity hover:opacity-80 shrink-0"
+            className="w-1/2 sm:w-96 xl:w-[38rem] aspect-[380/61] flex items-center justify-center select-none transition-opacity hover:opacity-80 shrink-0"
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
             aria-label="Shoebox Investments"
           >
-            <img
-              src={logoUrl}
-              alt=""
-              className="h-full w-full object-contain"
-              aria-hidden="true"
-            />
+            <Logo className="h-full w-full" />
           </a>
 
           <div className="hidden lg:flex items-center gap-10">
@@ -97,13 +92,21 @@ export default function Header({ onPartnerClick }: HeaderProps) {
             </button>
           </div>
 
-          <button
-            className="lg:hidden text-[#1A3929] p-2 shrink-0"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle Menu"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          <div className="flex lg:hidden items-center gap-2 shrink-0">
+            <button
+              onClick={onPartnerClick}
+              className="px-3 sm:px-4 py-2 sm:py-2.5 bg-[#1A3929] text-white font-sans text-[10px] sm:text-[11px] font-bold uppercase tracking-wider whitespace-nowrap cursor-pointer"
+            >
+              Contact
+            </button>
+            <button
+              className="text-[#1A3929] p-1.5 sm:p-2 shrink-0"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle Menu"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
         <AnimatePresence>
