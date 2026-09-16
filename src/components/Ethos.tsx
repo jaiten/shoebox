@@ -22,7 +22,7 @@ export default function Ethos() {
     },
     {
       title: 'REAL RELATIONSHIPS',
-      desc: 'Finding good opportunities in real estate, business financing, and technology through relationships built over years, not cold outreach.',
+      desc: 'We build relationships with developers, business owners, and technology founders to identify opportunities and grow together.',
     },
   ];
 
@@ -35,18 +35,18 @@ export default function Ethos() {
       body: 'text-white/72',
     },
     {
-      panel: 'bg-[#d4b472] border-[#e7cea0] hover:border-[#fff1cf]',
-      accent: 'bg-[#1a3929]',
-      index: 'text-[#1a3929]/70',
-      title: 'text-[#13291d]',
-      body: 'text-[#1a3929]/82',
+      panel: 'bg-[#213c2e] border-white/12 hover:border-[#c4a25a]/35',
+      accent: 'bg-[#c4a25a]',
+      index: 'text-[#c4a25a]',
+      title: 'text-white',
+      body: 'text-white/72',
     },
     {
-      panel: 'bg-[#d4b472] border-[#e7cea0] hover:border-[#fff1cf]',
-      accent: 'bg-[#1a3929]',
-      index: 'text-[#1a3929]/70',
-      title: 'text-[#1a3929]',
-      body: 'text-[#1a3929]/82',
+      panel: 'bg-[#213c2e] border-white/12 hover:border-[#c4a25a]/35',
+      accent: 'bg-[#c4a25a]',
+      index: 'text-[#c4a25a]',
+      title: 'text-white',
+      body: 'text-white/72',
     },
     {
       panel: 'bg-[#1a3929]/32 border-white/8 hover:border-[#c4a25a]/25',
@@ -84,8 +84,8 @@ export default function Ethos() {
                 OUR ETHOS
               </span>
             </div>
-            <h2 className="font-sans text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tight text-white mb-8 sm:mb-10 md:mb-12 leading-[1.12]">
-              How We Work With You.
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight text-white mb-8 sm:mb-10 md:mb-12 leading-[1.12]">
+              Our Investment Philosophy.
             </h2>
 
             <div className="space-y-7 sm:space-y-8 md:space-y-10">
@@ -128,9 +128,9 @@ export default function Ethos() {
               return (
                 <motion.div
                   key={item.title}
-                  whileHover={{ scale: 1.02 }}
+                  whileHover={{ y: -4 }}
                   transition={{ duration: 0.3 }}
-                  className={`relative overflow-hidden rounded-sm border shadow-[0_18px_50px_rgba(0,0,0,0.14)] flex min-h-[190px] sm:min-h-[215px] md:min-h-[250px] h-full flex-col justify-between p-5 sm:p-6 md:p-8 transition-all duration-300 group ${style.panel}`}
+                  className={`relative overflow-hidden rounded-2xl border shadow-[0_18px_50px_rgba(0,0,0,0.14)] flex min-h-[190px] sm:min-h-[215px] md:min-h-[250px] h-full flex-col justify-between p-5 sm:p-6 md:p-8 transition-all duration-300 group ${style.panel}`}
                 >
                   <div
                     className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"

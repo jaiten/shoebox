@@ -25,6 +25,7 @@ export default function Header({ onPartnerClick }: HeaderProps) {
       const total = doc.scrollHeight - doc.clientHeight;
       setScrollProgress(total > 0 ? (y / total) * 100 : 0);
     };
+    handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -55,17 +56,17 @@ export default function Header({ onPartnerClick }: HeaderProps) {
       />
 
       <nav
-        className={`fixed top-0 w-full h-22 md:h-28 z-50 transition-all duration-500 ${
+        className={`site-header fixed top-0 w-full h-20 md:h-24 z-50 transition-all duration-500 ${
           scrolled
-            ? 'bg-white/98 backdrop-blur-lg shadow-[0_2px_32px_rgba(26,57,41,0.08)] border-b border-[#1A3929]/8'
-            : 'bg-white/95 backdrop-blur-md border-b border-black/5'
+            ? 'bg-[#faf8f2]/95 backdrop-blur-xl shadow-[0_4px_30px_rgba(26,57,41,0.06)] border-b border-[#1A3929]/8'
+            : 'bg-[#faf8f2]/95 backdrop-blur-xl border-b border-black/5'
         }`}
         id="headerNav"
       >
         <div className="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full h-full gap-2 sm:gap-3">
           <a
             href="#"
-            className="w-[56%] max-w-[13.5rem] sm:w-72 md:w-[21rem] xl:w-[24rem] flex items-center justify-start select-none transition-opacity hover:opacity-80 shrink-0"
+            className="w-[50%] max-w-[12rem] sm:w-56 sm:max-w-none md:w-64 flex items-center justify-start select-none transition-opacity hover:opacity-80 shrink-0"
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
             aria-label="Shoebox Investments"
           >
@@ -102,7 +103,9 @@ export default function Header({ onPartnerClick }: HeaderProps) {
             <button
               className="text-[#1A3929] p-1.5 sm:p-2 shrink-0"
               onClick={() => setIsOpen(!isOpen)}
-              aria-label="Toggle Menu"
+              aria-label={isOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isOpen}
+              aria-controls="mobile-navigation"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -116,7 +119,8 @@ export default function Header({ onPartnerClick }: HeaderProps) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.2 }}
-              className="lg:hidden absolute top-22 md:top-28 left-0 w-full bg-white border-b border-[#1A3929]/10 shadow-lg z-40 py-5 px-4 sm:px-6"
+              id="mobile-navigation"
+              className="lg:hidden absolute top-20 md:top-24 left-0 w-full bg-white border-b border-[#1A3929]/10 shadow-lg z-40 py-5 px-4 sm:px-6"
             >
               <div className="flex flex-col gap-4">
                 {navLinks.map((link, i) => (

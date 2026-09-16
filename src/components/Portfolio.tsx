@@ -48,7 +48,7 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
   }, [selectedProject]);
 
   return (
-    <section className="py-20 md:py-32 bg-[#f9f9f9]" id="projects">
+    <section className="py-20 md:py-32 bg-[#faf8f2]" id="projects">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -64,14 +64,13 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
                 Current Projects
               </span>
             </div>
-            <h2 className="font-sans text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tight text-[#1a3929] mb-4">
-              British Columbia Projects. Expanding Florida Focus.
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight text-[#1a3929] mb-4">
+              Real Assets. Long-Term Value.
             </h2>
             <p className="font-serif text-sm md:text-base text-neutral-600 leading-relaxed font-light">
-              Shoebox Investments partners with experienced developers to bring
-              high-quality residential projects to life across British Columbia,
-              with a growing focus on opportunities in Florida, particularly the
-              Miami market.
+              We invest at the ground level alongside experienced developers.
+              Our featured assets include a North Delta townhouse community and
+              a rural subdivision in Greater Victoria.
             </p>
           </div>
         </motion.div>
@@ -92,7 +91,7 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
                 onClick={() => setSelectedProject(project)}
                 className="group cursor-pointer block"
               >
-                <div className="relative aspect-[16/10] overflow-hidden bg-[#c4a25a]/10 mb-6 shadow-sm border border-[#1a3929]/8">
+                <div className="relative rounded-2xl aspect-[16/10] overflow-hidden bg-[#c4a25a]/10 mb-6 shadow-sm border border-[#1a3929]/8">
                   <img
                     src={project.imageUrl}
                     alt={project.title}
@@ -112,7 +111,7 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
                     {project.location} | {project.category}
                   </span>
                 </div>
-                <h3 className="font-sans text-lg sm:text-xl md:text-2xl font-semibold text-[#1a3929] tracking-tight group-hover:text-[#2d5a40] transition-colors">
+                <h3 className="font-serif text-xl sm:text-2xl md:text-3xl font-normal text-[#1a3929] tracking-tight group-hover:text-[#2d5a40] transition-colors">
                   {project.title}
                 </h3>
                 {project.subtitle && (
@@ -132,7 +131,7 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="mt-10 md:mt-12 border border-dashed border-[#1a3929]/20 p-6 sm:p-8 flex items-center gap-4"
         >
-          <div className="p-3 bg-[#f3f9f4] text-[#1a3929] rounded-full flex-shrink-0">
+          <div className="p-3 bg-[#f2f0e9] text-[#1a3929] rounded-full flex-shrink-0">
             <Clock className="w-5 h-5" />
           </div>
           <div>
@@ -150,7 +149,7 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-16 md:mt-20 bg-white border border-[#1a3929]/8 shadow-sm overflow-hidden"
+          className="rounded-2xl mt-16 md:mt-20 bg-white border border-[#1a3929]/8 shadow-sm overflow-hidden"
         >
           <div className="h-[2px] bg-gradient-to-r from-[#1a3929] via-[#c4a25a] to-[#1a3929]" />
           <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-8 md:gap-10 p-5 sm:p-6 md:p-12">
@@ -161,15 +160,14 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
                   Partner With Shoebox Investments
                 </span>
               </div>
-              <h3 className="font-sans text-xl sm:text-2xl md:text-4xl font-semibold tracking-tight text-[#1a3929] mb-5">
+              <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl font-normal tracking-tight text-[#1a3929] mb-5">
                 Capital, strategy, and long-term partnership for quality
                 projects.
               </h3>
               <p className="font-serif text-neutral-600 leading-relaxed font-light mb-4">
-                Shoebox Investments actively invests in residential and
-                mixed-use real estate projects across British Columbia and is
-                seeking new opportunities in Florida, especially the Miami
-                market.
+                Shoebox Investments seeks ground-level opportunities in land
+                assemblies, townhouses, high-rise residential developments, and
+                subdivisions across growing North American markets.
               </p>
               <p className="font-serif text-neutral-600 leading-relaxed font-light">
                 We partner with experienced developers, builders, landowners,
@@ -179,7 +177,7 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
               </p>
             </div>
 
-            <div className="bg-[#f3f9f4] border border-[#1a3929]/8 p-5 sm:p-6 md:p-8">
+            <div className="bg-[#f2f0e9] border border-[#1a3929]/8 p-5 sm:p-6 md:p-8">
               <p className="font-sans text-[11px] font-bold uppercase tracking-[0.24em] text-[#1a3929] mb-5">
                 We Are Interested In
               </p>
@@ -274,7 +272,7 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
                         {selectedProject.highlights.map((highlight) => (
                           <div
                             key={highlight}
-                            className="flex items-start gap-3 p-3 bg-[#f3f9f4] border border-[#1a3929]/6"
+                            className="flex items-start gap-3 p-3 bg-[#f2f0e9] border border-[#1a3929]/6"
                           >
                             <Check className="w-4 h-4 mt-0.5 text-[#c4a25a] flex-shrink-0" />
                             <span className="font-serif text-sm text-neutral-600 leading-relaxed font-light">
@@ -311,7 +309,7 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 border-t border-[#1a3929]/10 pt-6">
                     <div className="flex items-center gap-3">
-                      <div className="p-3 bg-[#f3f9f4] text-[#1a3929] rounded">
+                      <div className="p-3 bg-[#f2f0e9] text-[#1a3929] rounded">
                         <MapPin className="w-4 h-4" />
                       </div>
                       <div>
@@ -324,7 +322,7 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
-                      <div className="p-3 bg-[#f3f9f4] text-[#1a3929] rounded">
+                      <div className="p-3 bg-[#f2f0e9] text-[#1a3929] rounded">
                         <Layers className="w-4 h-4" />
                       </div>
                       <div>

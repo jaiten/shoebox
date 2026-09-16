@@ -22,21 +22,21 @@ export default function Hero({ onContactClick }: HeroProps) {
   };
 
   return (
-    <section className="relative min-h-[90vh] md:min-h-screen flex flex-col pt-20 md:pt-24 overflow-hidden bg-[#0e2116]">
+    <section className="hero-section relative min-h-[90svh] md:min-h-screen flex flex-col pt-20 md:pt-24 overflow-hidden bg-[#0e2116]">
       <div className="absolute inset-0 z-0">
         <img
           src={HERO_IMAGE}
           alt="Sophisticated architectural coastal skyline of real estate development assets"
-          className="w-full h-full object-cover contrast-105 brightness-60 saturate-110 select-none"
+          className="hero-image w-full h-full object-cover select-none"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0e2116]/96 via-[#1a3929]/70 to-[#1a3929]/20" />
+        <div className="hero-shade absolute inset-0" />
         <div
           className="absolute bottom-0 left-0 w-2/3 h-1/2 pointer-events-none"
           style={{ background: 'radial-gradient(ellipse at 0% 100%, rgba(196,162,90,0.10) 0%, transparent 65%)' }}
         />
       </div>
 
-      <div className="relative z-10 flex-1 flex items-center max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full py-12 md:py-24">
+      <div className="relative z-10 flex-1 flex items-center max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full py-16 md:py-24">
         <div className="max-w-3xl">
           <motion.div
             initial={{ scaleX: 0, opacity: 0 }}
@@ -49,38 +49,39 @@ export default function Hero({ onContactClick }: HeroProps) {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="inline-flex items-center gap-2 py-1.5 px-3 mb-6 bg-[#c4a25a]/15 backdrop-blur-md border border-[#c4a25a]/35 font-sans text-[10px] sm:text-[11px] font-bold tracking-[0.2em] sm:tracking-[0.25em] text-[#d4b472] uppercase"
+            className="inline-flex items-center gap-3 mb-8 font-sans text-[10px] sm:text-[11px] font-bold tracking-[0.2em] sm:tracking-[0.25em] text-[#d4b472] uppercase"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-[#c4a25a] animate-gold-pulse flex-shrink-0" />
-            Entrepreneur-Led Investment Partner
+            <span className="w-1.5 h-1.5 rounded-full bg-[#c4a25a] flex-shrink-0" />
+            Head Office: Vancouver, Canada
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.22, ease: [0.16, 1, 0.3, 1] }}
-            className="font-sans text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight text-white mb-5 md:mb-6 leading-[1.05]"
+            className="hero-title font-serif font-normal tracking-[-0.045em] text-[#faf8f2] mb-7 leading-[1.06]"
           >
-            Helping Entrepreneurs<br />
-            <span className="text-[#a0c9ac]">Build Wealth</span>
+            Strategic Investments.<br />
+            Real Assets.<br />
+            <span className="text-[#d8bf88] italic">Long-Term Vision.</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.32, ease: [0.16, 1, 0.3, 1] }}
-            className="font-sans text-base sm:text-lg md:text-xl text-white/82 mb-4 md:mb-5 max-w-2xl leading-relaxed"
+            className="font-sans text-base md:text-lg text-white/75 mb-6 max-w-xl leading-[1.75]"
           >
-            We back entrepreneurs the way we would want to be backed: with practical capital, aligned thinking, and a long-term view.
+            Based in Vancouver, Shoebox Investments acquires MSPs and MSSPs, invests at the ground level in real estate development, and provides short-term real estate financing starting at 12% per annum.
           </motion.p>
 
           <motion.p
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.38, ease: [0.16, 1, 0.3, 1] }}
-            className="font-serif text-base sm:text-lg md:text-xl text-white/70 mb-8 md:mb-11 max-w-xl leading-relaxed font-light"
+            className="font-sans text-[11px] sm:text-xs tracking-[0.06em] text-white/55 mb-9 md:mb-11 max-w-xl leading-[2]"
           >
-            Real Estate <span className="text-[#c4a25a]/60">&bull;</span> Business Financing <span className="text-[#c4a25a]/60">&bull;</span> Private Lending <span className="text-[#c4a25a]/60">&bull;</span> MSP Acquisitions <span className="text-[#c4a25a]/60">&bull;</span> Strategic Investments
+            MSP &amp; MSSP Acquisitions <span className="text-[#c4a25a]/60">&bull;</span> Real Estate Development <span className="text-[#c4a25a]/60">&bull;</span> Private Lending <span className="text-[#c4a25a]/60">&bull;</span> Venture Capital
           </motion.p>
 
           <motion.div
@@ -90,17 +91,17 @@ export default function Hero({ onContactClick }: HeroProps) {
             className="flex flex-col sm:flex-row gap-3 sm:gap-4"
           >
             <button
-              onClick={() => onContactClick('Business Financing')}
-              className="relative overflow-hidden w-full sm:w-auto px-6 sm:px-10 py-4 sm:py-5 bg-[#c4a25a] text-[#0e2116] font-sans text-[11px] sm:text-xs font-bold uppercase tracking-[0.18em] sm:tracking-widest text-center transition-all duration-300 hover:shadow-lg active:scale-95 cursor-pointer group"
+              onClick={() => onContactClick('MSP/Technology')}
+              className="rounded-full relative overflow-hidden w-full sm:w-auto px-6 sm:px-10 py-4 sm:py-5 bg-[#c4a25a] text-[#0e2116] font-sans text-[11px] sm:text-xs font-bold uppercase tracking-[0.18em] sm:tracking-widest text-center transition-all duration-300 hover:shadow-lg active:scale-95 cursor-pointer group"
             >
-              <span className="relative z-10 group-hover:text-white transition-colors duration-300">Get Business Funding</span>
+              <span className="relative z-10 group-hover:text-white transition-colors duration-300">Sell Your MSP</span>
               <span className="absolute inset-0 bg-[#1a3929] translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
             </button>
             <button
               onClick={handleViewProjects}
-              className="w-full sm:w-auto px-6 sm:px-10 py-4 sm:py-5 border border-[#c4a25a]/40 text-white font-sans text-[11px] sm:text-xs font-bold uppercase tracking-[0.18em] sm:tracking-widest text-center backdrop-blur-sm transition-all duration-300 hover:border-[#c4a25a] hover:bg-[#c4a25a]/10 hover:text-[#d4b472] active:scale-95 cursor-pointer"
+              className="rounded-full w-full sm:w-auto px-6 sm:px-10 py-4 sm:py-5 border border-[#c4a25a]/40 text-white font-sans text-[11px] sm:text-xs font-bold uppercase tracking-[0.18em] sm:tracking-widest text-center backdrop-blur-sm transition-all duration-300 hover:border-[#c4a25a] hover:bg-[#c4a25a]/10 hover:text-[#d4b472] active:scale-95 cursor-pointer"
             >
-              See Our Projects
+              View All Assets
             </button>
           </motion.div>
         </div>

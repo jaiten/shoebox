@@ -99,3 +99,50 @@ html {
 .reveal-up {
   animation: reveal-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
+
+/* Shared finish: warm surfaces, restrained motion, and clear keyboard focus. */
+body {
+  margin: 0;
+  background: #faf8f2;
+  -webkit-font-smoothing: antialiased;
+}
+button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+button { cursor: pointer; }
+button:focus-visible, a:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible {
+  outline: 2px solid #b38d45;
+  outline-offset: 5px;
+}
+h1, h2, h3 { text-wrap: balance; }
+p { text-wrap: pretty; }
+.site-header button { border-radius: 999px; }
+.site-header { transition: background-color .4s ease, box-shadow .4s ease; }
+.hero-title { font-size: clamp(2.6rem, 5.7vw, 5rem); }
+.hero-image { filter: brightness(.82) saturate(.75); object-position: 65% center; }
+.hero-shade {
+  background: linear-gradient(90deg, rgba(9,27,18,.96), rgba(9,27,18,.74) 46%, rgba(9,27,18,.12)),
+    linear-gradient(0deg, #0e2116, transparent 30%);
+}
+.mandate-card {
+  background: linear-gradient(135deg, rgba(255,255,255,.045), rgba(255,255,255,.015));
+  transition: background-color .35s ease, border-color .35s ease, box-shadow .35s ease;
+}
+.mandate-card:hover {
+  background-color: rgba(255,255,255,.035);
+  border-color: rgba(216,191,136,.4);
+  box-shadow: 0 16px 48px rgba(0,0,0,.12);
+}
+#contact button[type="submit"] { border-radius: 999px; }
+#about { background: #f2f0e9; }
+@media (max-width: 640px) {
+  .hero-shade { background: linear-gradient(90deg, rgba(9,27,18,.92), rgba(9,27,18,.65)), linear-gradient(0deg, #0e2116, transparent 40%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -8,7 +8,7 @@ import { ABOUT_IMAGE } from '../data';
 
 export default function About() {
   return (
-    <section className="py-20 md:py-32 bg-[#f3f9f4] border-b border-[#1a3929]/8 overflow-hidden" id="about">
+    <section className="py-20 md:py-32 bg-[#f2f0e9] border-b border-[#1a3929]/8 overflow-hidden" id="about">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-24 items-center">
         <motion.div
           initial={{ opacity: 0, x: -32 }}
@@ -20,12 +20,12 @@ export default function About() {
           <div className="flex items-center gap-3 mb-4">
             <span className="w-6 h-[1.5px] bg-[#c4a25a]" />
             <span className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-[#1a3929]">
-              WHY SHOEBOX?
+              SHOEBOX INVESTMENTS
             </span>
           </div>
 
-          <h2 className="font-sans text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tight text-[#1a3929] mb-6 md:mb-8 leading-[1.15]">
-            Every successful business starts somewhere.
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight text-[#1a3929] mb-6 md:mb-8 leading-[1.15]">
+            Built on Partnership. Focused on Lasting Value.
           </h2>
 
           <motion.div
@@ -35,14 +35,14 @@ export default function About() {
             transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
             className="space-y-5 md:space-y-6"
           >
-            <p className="font-serif text-base md:text-lg text-neutral-600 leading-relaxed font-light">
-              Sometimes it&apos;s a notebook. Sometimes it&apos;s a sketch on a napkin. Sometimes it&apos;s a shoebox filled with receipts, ideas, plans and dreams.
+            <p className="font-sans text-base md:text-lg text-neutral-600 leading-relaxed font-light">
+              Shoebox Investments is a Canadian private investment firm headquartered in Vancouver, focused on real estate development, private credit, MSP and MSSP acquisitions, and early-stage technology ventures.
             </p>
-            <p className="font-serif text-base md:text-lg text-neutral-600 leading-relaxed font-light">
-              Shoebox Investments was built on the belief that disciplined execution turns simple ideas into successful businesses, real estate and long-term wealth.
+            <p className="font-sans text-base md:text-lg text-neutral-600 leading-relaxed font-light">
+              Our investment philosophy prioritizes growth and equity protection over short-lived, highly speculative market bubbles. We look for sound fundamentals and opportunities to build lasting value.
             </p>
-            <p className="font-serif text-base md:text-lg text-neutral-600 leading-relaxed font-light">
-              Today we continue investing in entrepreneurs, developers and business owners who share that same mindset.
+            <p className="font-sans text-base md:text-lg text-neutral-600 leading-relaxed font-light">
+              Every partnership is an active, collaborative commitment to shared profitability and excellence in execution. We work alongside entrepreneurs, developers, and business owners to help their businesses and projects grow.
             </p>
           </motion.div>
 
@@ -62,7 +62,7 @@ export default function About() {
           transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           className="md:col-span-6 md:col-start-7 mt-4 md:mt-0 relative"
         >
-          <div className="aspect-[4/5] sm:aspect-[5/6] md:aspect-[4/5] relative overflow-hidden bg-[#c4a25a]/10 shadow-xl group">
+          <div className="rounded-t-[6rem] rounded-b-xl aspect-[4/5] sm:aspect-[5/6] md:aspect-[4/5] relative overflow-hidden bg-[#c4a25a]/10 shadow-[0_24px_64px_rgba(26,57,41,0.12)] group">
             <img
               src={ABOUT_IMAGE}
               alt="Sophisticated modern corporate boardroom concrete desk representing the Shoebox standard"

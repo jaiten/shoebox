@@ -19,12 +19,12 @@ export const REAL_ESTATE_IMAGE = residentialDevelopmentImage;
 export const PROJECTS_DATA: Project[] = [
   {
     id: 'delta-townhome-community',
-    title: 'Delta Townhome Community',
-    subtitle: '65 Contemporary Townhomes | Delta, BC',
+    title: 'North Delta Townhomes',
+    subtitle: '65 Contemporary Townhomes | North Delta, BC',
     category: 'Residential Development',
-    description: 'Shoebox Investments is a proud investment partner in a planned 65-unit townhouse community in Delta. Designed for modern family living, the development features spacious homes ranging from approximately 1,100 to 1,900 sq. ft., contemporary architecture, underground parking, and landscaped amenity spaces.',
+    description: 'Shoebox Investments is an investment partner in a planned 65-unit townhouse community in North Delta. Spacious homes in a desirable, family-oriented neighbourhood combine efficient layouts and modern, sustainable amenities with convenient access to schools, shopping, highways, and transit. The development is designed to meet demand for higher-density housing and support long-term capital appreciation.',
     imageUrl: deltaTownhomeImage,
-    location: 'Delta, BC',
+    location: 'North Delta, BC',
     highlights: [
       '65 contemporary townhomes',
       'Approximately 1,100-1,900 sq. ft.',
@@ -40,10 +40,10 @@ export const PROJECTS_DATA: Project[] = [
   },
   {
     id: 'langford-estate-lots',
-    title: 'Langford Estate Lots',
-    subtitle: 'Premium Estate Lot Development | Greater Victoria, BC',
+    title: 'Victoria Subdivision',
+    subtitle: 'Estate Lots in Langford | Greater Victoria, BC',
     category: 'Land Development',
-    description: 'Shoebox Investments is participating in the transformation of a 14-acre property in Langford into a limited collection of premium estate-sized residential lots. Designed for buyers seeking privacy, space, and a custom home lifestyle, these properties offer the opportunity to build in a peaceful natural setting while remaining close to Greater Victoria.',
+    description: 'Shoebox Investments is participating in the subdivision of a 14-acre property in Langford, Greater Victoria, into multi-acre single-family building lots. The rural setting offers space, privacy, and potential views, with easy highway access and nearby town centres.',
     imageUrl: landDevelopmentImage,
     location: 'Greater Victoria, BC',
     highlights: [
@@ -70,13 +70,13 @@ export const ETHOS_DATA: EthosItem[] = [
   {
     id: 'ethos-2',
     number: '02',
-    title: 'Disciplined execution',
-    description: 'Meticulous attention to detail and rigorous risk management define every move we make.'
+    title: 'Growth & equity protection',
+    description: 'We prioritize sound fundamentals, disciplined risk management, and equity protection over short-lived, highly speculative market bubbles.'
   },
   {
     id: 'ethos-3',
     number: '03',
     title: 'Strategic growth',
-    description: 'We back practical opportunities where hands-on experience and involvement can unlock real growth.'
+    description: 'We work actively with our partners to build shared profitability through practical growth, hands-on involvement, and excellence in execution.'
   }
 ];

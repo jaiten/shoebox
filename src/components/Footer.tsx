@@ -35,7 +35,7 @@ export default function Footer({ onContactClick }: FooterProps) {
     terms: {
       title: "Terms of Engagement",
       content:
-        "By using this website or submitting an inquiry, you acknowledge that Shoebox Investments provides business financing, real estate funding, and investment partnership opportunities. Nothing on this website constitutes an offer to sell securities. Specific partnership and financing terms are agreed upon directly with our team.",
+        "By using this website or submitting an inquiry, you acknowledge that Shoebox Investments pursues MSP and MSSP acquisitions, real estate development partnerships, private lending, and venture capital investments. Nothing on this website constitutes an offer to sell securities. Specific partnership and financing terms are agreed upon directly with our team.",
     },
     disclaimer: {
       title: "Risk Disclosures",
@@ -73,9 +73,9 @@ export default function Footer({ onContactClick }: FooterProps) {
             SHOEBOX INVESTMENTS
           </button>
           <p className="font-serif text-sm md:text-base text-[#8fbc9e] leading-relaxed font-light">
-            An entrepreneur-led investment company. We help businesses get
-            financing, fund real estate opportunities, and partner with
-            entrepreneurs, developers, and business owners across North America.
+            Headquartered in Vancouver, we acquire MSPs and MSSPs, invest at the
+            ground level in real estate development, provide short-term private
+            lending, and back early-stage technology ventures across North America.
           </p>
 
           <div className="mt-8 w-12 h-[1.5px] bg-gradient-to-r from-[#c4a25a] to-transparent" />

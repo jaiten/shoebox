@@ -12,52 +12,38 @@ interface BentoFocusProps {
 
 const MANDATES = [
   {
-    tag: 'Business Loans',
-    headline: 'Working Capital & Growth Loans',
-    body: 'Financing for equipment, working capital, expansion, and other growth needs for established businesses and entrepreneurs.',
-    cta: 'Get Business Funding',
-    type: 'Business Financing',
+    tag: 'MSP & MSSP Acquisitions',
+    headline: '$500K - $1.5M ARR',
+    body: 'Actively acquiring and scaling MSPs and MSSPs in Vancouver, Toronto, Miami, New York, and Los Angeles. We seek providers with $500K to $1.5M in annual recurring revenue, supporting growth in cybersecurity, AI, and IT support services.',
+    cta: 'Sell Your MSP',
+    type: 'MSP/Technology',
   },
   {
     tag: 'Real Estate Development',
-    headline: 'Ground-Level JV Partner',
-    body: 'Investing at the ground level in land assemblies, townhouses, and high-rise residential development projects across North America.',
+    headline: 'Ground-Level Investment',
+    body: 'Investing at the ground level in land assemblies, townhouses, high-rise residential developments, and subdivisions. We partner with developers through strategic joint ventures in growing North American markets.',
     cta: 'Explore Partnership',
     type: 'Real Estate',
   },
   {
     tag: 'Private Lending',
-    headline: '12%+ Per Annum',
-    body: 'Short-term bridge financing and secure first/second mortgage lending for real estate projects in the Lower Mainland and GTA.',
+    headline: 'From 12% Per Annum',
+    body: 'Short-term bridge financing and secured first and second mortgage loans for institutional and individual property developers. Financing for real estate projects in the Lower Mainland and GTA.',
     cta: 'Apply for Financing',
-    type: 'Real Estate',
+    type: 'Private Lending',
   },
   {
-    tag: 'MSP & MSSP Acquisitions',
-    headline: '$500K - $1.5M ARR',
-    body: 'Searching for MSPs from $500K to $1.5M in ARR to acquire across Vancouver, Toronto, Miami, New York and Los Angeles.',
-    cta: 'Sell Your MSP',
-    type: 'MSP/Technology',
+    tag: 'Venture Capital',
+    headline: 'Early-Stage Technology',
+    body: 'Minority and majority investments in early-stage enterprise software, AI platforms, and logistics automation businesses with high barriers to entry and the potential to transform how companies operate and scale.',
+    cta: 'Discuss Your Venture',
+    type: 'Other Investment',
   },
 ];
 
-function dividerClasses(index: number) {
-  const base = index === 0 ? 'border-t-0' : 'border-t';
-  const sm =
-    index === 0
-      ? 'sm:border-t-0 sm:border-l-0'
-      : index === 1
-        ? 'sm:border-t-0 sm:border-l'
-        : index === 2
-          ? 'sm:border-t sm:border-l-0'
-          : 'sm:border-t sm:border-l';
-  const lg = index === 0 ? 'lg:border-t-0 lg:border-l-0' : 'lg:border-t-0 lg:border-l';
-  return `${base} ${sm} ${lg}`;
-}
-
 export default function BentoFocus({ onSelectOpportunityType }: BentoFocusProps) {
   return (
-    <section className="bg-[#0e2116] py-16 md:py-20 border-b border-[#c4a25a]/15" id="focus">
+    <section className="focus-section bg-[#0e2116] py-20 md:py-28 border-b border-[#c4a25a]/15" id="focus">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -66,13 +52,13 @@ export default function BentoFocus({ onSelectOpportunityType }: BentoFocusProps)
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="flex items-center gap-3 mb-10"
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-[#c4a25a] animate-gold-pulse flex-shrink-0" />
+          <span className="w-1.5 h-1.5 rounded-full bg-[#c4a25a] flex-shrink-0" />
           <span className="font-sans text-xs font-bold uppercase tracking-[0.3em] text-[#c4a25a]">
-            Active Mandates
+            Four Investment Verticals
           </span>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-[#c4a25a]/15">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
           {MANDATES.map((mandate, index) => (
             <motion.div
               key={mandate.tag}
@@ -80,17 +66,18 @@ export default function BentoFocus({ onSelectOpportunityType }: BentoFocusProps)
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.7, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
-              className={`group px-0 sm:px-6 lg:px-8 py-7 sm:py-8 lg:py-0 flex flex-col gap-4 border-[#c4a25a]/15 ${dividerClasses(index)}`}
+              className="mandate-card group p-7 sm:p-10 flex flex-col gap-5 border border-white/10 rounded-2xl"
             >
-              <span className="font-sans text-[10px] font-bold tracking-[0.22em] text-white/40 uppercase">
+              <span className="font-sans text-[10px] font-semibold tracking-[0.2em] text-[#d8bf88] uppercase">
+                <span className="text-white/30 mr-4">0{index + 1}</span>
                 {mandate.tag}
               </span>
 
-              <p className="font-sans text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight leading-tight">
+              <p className="font-serif text-3xl sm:text-4xl font-normal text-[#faf8f2] tracking-tight leading-tight">
                 {mandate.headline}
               </p>
 
-              <p className="font-serif text-white/60 text-sm leading-relaxed font-light flex-1">
+              <p className="font-sans text-white/65 text-sm sm:text-base leading-[1.8] flex-1 max-w-lg">
                 {mandate.body}
               </p>
 

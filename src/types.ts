@@ -29,7 +29,7 @@ export interface InquiryInput {
   name: string;
   company: string;
   email: string;
-  opportunityType: 'Business Financing' | 'Real Estate' | 'MSP/Technology' | 'Other Investment';
+  opportunityType: 'Business Financing' | 'Private Lending' | 'Real Estate' | 'MSP/Technology' | 'Other Investment';
   message: string;
 }
 

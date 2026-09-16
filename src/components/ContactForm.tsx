@@ -18,7 +18,7 @@ export default function ContactForm({ selectedType, onClearType }: ContactFormPr
     name: '',
     company: '',
     email: '',
-    opportunityType: 'Business Financing',
+    opportunityType: 'MSP/Technology',
     message: '',
   });
 
@@ -67,13 +67,13 @@ export default function ContactForm({ selectedType, onClearType }: ContactFormPr
   };
 
   const handleResetForm = () => {
-    setFormData({ name: '', company: '', email: '', opportunityType: 'Business Financing', message: '' });
+    setFormData({ name: '', company: '', email: '', opportunityType: 'MSP/Technology', message: '' });
     setSuccessMessage(null);
     setErrorString(null);
     onClearType();
   };
 
-  const inputClass = 'w-full bg-transparent border-0 border-b border-neutral-200 focus:border-[#1a3929] focus:ring-0 py-2.5 px-0 font-serif text-sm transition-colors duration-300 outline-none';
+  const inputClass = 'w-full bg-transparent border-0 border-b border-neutral-200 focus:border-[#1a3929] focus:ring-0 py-3.5 px-0 font-serif text-sm transition-colors duration-300 outline-none';
 
   return (
     <section className="py-20 md:py-32 bg-white border-t border-black/5" id="contact">
@@ -93,11 +93,11 @@ export default function ContactForm({ selectedType, onClearType }: ContactFormPr
                   CONTACT
                 </span>
               </div>
-              <h2 className="font-sans text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tight text-[#1a3929] mb-6 md:mb-8 leading-[1.15]">
+              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight text-[#1a3929] mb-6 md:mb-8 leading-[1.15]">
                 Let&apos;s Start a Conversation.
               </h2>
               <p className="font-serif text-neutral-500 text-sm md:text-base leading-relaxed mb-10 md:mb-12 font-light">
-                Whether you need business financing, are funding a real estate project, want to become an investment partner, or are ready to sell your MSP, we&apos;d love to hear from you.
+                Looking to sell your MSP or MSSP, bring on a development partner, arrange short-term real estate financing, or raise capital for a technology venture? Tell us about your opportunity.
               </p>
             </div>
 
@@ -138,7 +138,7 @@ export default function ContactForm({ selectedType, onClearType }: ContactFormPr
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0 }}
                   onSubmit={handleSubmit}
-                  className="space-y-8 bg-[#f3f9f4] p-5 sm:p-6 md:p-14 border border-[#1a3929]/10 shadow-sm relative overflow-hidden"
+                  className="rounded-2xl space-y-8 bg-[#f2f0e9] p-5 sm:p-6 md:p-14 border border-[#1a3929]/10 shadow-sm relative overflow-hidden"
                 >
                   <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#1a3929] via-[#c4a25a] to-[#1a3929]" />
 
@@ -180,10 +180,10 @@ export default function ContactForm({ selectedType, onClearType }: ContactFormPr
                         How Can We Help?
                       </label>
                       <select name="opportunityType" value={formData.opportunityType} onChange={handleInputChange} className={`${inputClass} cursor-pointer`} disabled={loading}>
-                        <option value="Business Financing">Business Financing</option>
-                        <option value="Real Estate">Real Estate Funding</option>
-                        <option value="MSP/Technology">Sell Your MSP</option>
-                        <option value="Other Investment">Become an Investment Partner</option>
+                        <option value="MSP/Technology">Sell Your MSP / MSSP</option>
+                        <option value="Real Estate">Real Estate Development Partnership</option>
+                        <option value="Private Lending">Short-Term Real Estate Financing</option>
+                        <option value="Other Investment">Venture Capital / Investment Partnership</option>
                       </select>
                     </div>
                   </div>
