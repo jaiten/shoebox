@@ -35,13 +35,13 @@ export default function About() {
             transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
             className="space-y-5 md:space-y-6"
           >
-            <p className="font-sans text-base md:text-lg text-neutral-600 leading-relaxed font-light">
+            <p className="font-sans text-base md:text-lg text-neutral-700 leading-relaxed">
               Shoebox Investments is a Canadian private investment firm headquartered in Vancouver, focused on real estate development, private credit, MSP and MSSP acquisitions, and early-stage technology ventures.
             </p>
-            <p className="font-sans text-base md:text-lg text-neutral-600 leading-relaxed font-light">
+            <p className="font-sans text-base md:text-lg text-neutral-700 leading-relaxed">
               Our investment philosophy prioritizes growth and equity protection over short-lived, highly speculative market bubbles. We look for sound fundamentals and opportunities to build lasting value.
             </p>
-            <p className="font-sans text-base md:text-lg text-neutral-600 leading-relaxed font-light">
+            <p className="font-sans text-base md:text-lg text-neutral-700 leading-relaxed">
               Every partnership is an active, collaborative commitment to shared profitability and excellence in execution. We work alongside entrepreneurs, developers, and business owners to help their businesses and projects grow.
             </p>
           </motion.div>

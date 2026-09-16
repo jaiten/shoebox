@@ -70,7 +70,7 @@ export default function Hero({ onContactClick }: HeroProps) {
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.32, ease: [0.16, 1, 0.3, 1] }}
-            className="font-sans text-base md:text-lg text-white/75 mb-6 max-w-xl leading-[1.75]"
+            className="font-sans text-base md:text-lg text-white/90 mb-6 max-w-xl leading-[1.75]"
           >
             Based in Vancouver, Shoebox Investments acquires MSPs and MSSPs, invests at the ground level in real estate development, and provides short-term real estate financing starting at 12% per annum.
           </motion.p>
@@ -79,7 +79,7 @@ export default function Hero({ onContactClick }: HeroProps) {
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.38, ease: [0.16, 1, 0.3, 1] }}
-            className="font-sans text-[11px] sm:text-xs tracking-[0.06em] text-white/55 mb-9 md:mb-11 max-w-xl leading-[2]"
+            className="font-sans text-[11px] sm:text-xs tracking-[0.06em] text-white/75 mb-9 md:mb-11 max-w-xl leading-[2]"
           >
             MSP &amp; MSSP Acquisitions <span className="text-[#c4a25a]/60">&bull;</span> Real Estate Development <span className="text-[#c4a25a]/60">&bull;</span> Private Lending <span className="text-[#c4a25a]/60">&bull;</span> Venture Capital
           </motion.p>
@@ -115,7 +115,7 @@ export default function Hero({ onContactClick }: HeroProps) {
         aria-hidden="true"
       >
         <span
-          className="font-sans text-[9px] font-bold tracking-[0.3em] text-[#c4a25a]/50 uppercase"
+          className="font-sans text-[9px] font-bold tracking-[0.3em] text-[#c4a25a]/80 uppercase"
           style={{ writingMode: 'vertical-rl' }}
         >
           Scroll

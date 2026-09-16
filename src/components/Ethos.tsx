@@ -26,25 +26,6 @@ export default function Ethos() {
     },
   ];
 
-  const greenCard = {
-    panel: 'bg-[#1a3929] border-white/12 hover:border-[#c4a25a]/50',
-    accent: 'bg-[#d4b472]',
-    index: 'text-[#d4b472]',
-    title: 'text-white',
-    body: 'text-white/72',
-  };
-
-  const goldCard = {
-    panel: 'bg-[#d4b472] border-[#e2c995] hover:border-[#f0dbb1]',
-    accent: 'bg-[#927025]',
-    index: 'text-[#1a3929]/75',
-    title: 'text-[#1a3929]',
-    body: 'text-[#1a3929]/85',
-  };
-
-  // Echo the logo's green / gold / gold / green arrangement.
-  const cardStyles = [greenCard, goldCard, goldCard, greenCard];
-
   return (
     <section className="py-20 md:py-32 bg-[#0e2116] text-white overflow-hidden relative" id="philosophy">
       <div
@@ -86,14 +67,14 @@ export default function Ethos() {
                   transition={{ duration: 0.6, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
                   className="flex gap-4 sm:gap-6 group"
                 >
-                  <div className="font-sans font-bold text-2xl text-[#c4a25a] opacity-70 group-hover:opacity-100 transition-opacity duration-300 tabular-nums leading-none pt-0.5 min-w-[2.5rem]">
+                  <div className="font-sans font-bold text-2xl text-[#d4b472] transition-opacity duration-300 tabular-nums leading-none pt-0.5 min-w-[2.5rem]">
                     {item.number}
                   </div>
                   <div>
-                    <h4 className="font-sans text-sm font-bold uppercase tracking-[0.18em] sm:tracking-widest text-white/90 mb-2 group-hover:text-white transition-colors">
+                    <h4 className="font-sans text-sm font-bold uppercase tracking-[0.18em] sm:tracking-widest text-white mb-2 transition-colors">
                       {item.title}
                     </h4>
-                    <p className="font-serif text-white/68 text-sm md:text-base leading-relaxed font-light">
+                    <p className="font-serif text-white/85 text-sm md:text-base leading-relaxed">
                       {item.description}
                     </p>
                     <div className="mt-4 h-[1px] w-10 sm:w-12 bg-[#c4a25a]/45 group-hover:bg-[#c4a25a] transition-colors duration-500" />
@@ -108,39 +89,29 @@ export default function Ethos() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 auto-rows-fr items-stretch"
+            className="relative rounded-3xl p-px bg-gradient-to-br from-[#d4b472]/60 via-white/10 to-[#d4b472]/25 shadow-[0_40px_90px_-30px_rgba(0,0,0,0.6)]"
           >
-            {supportPoints.map((item, index) => {
-              const style = cardStyles[index];
-
-              return (
-                <motion.div
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-px overflow-hidden rounded-[calc(1.5rem-1px)] bg-white/10">
+              {supportPoints.map((item, index) => (
+                <div
                   key={item.title}
-                  whileHover={{ y: -4 }}
-                  transition={{ duration: 0.3 }}
-                  className={`relative overflow-hidden rounded-2xl border shadow-[0_18px_50px_rgba(0,0,0,0.14)] flex min-h-[190px] sm:min-h-[215px] md:min-h-[250px] h-full flex-col justify-between p-5 sm:p-6 md:p-8 transition-all duration-300 group ${style.panel}`}
+                  className="group relative flex min-h-[200px] md:min-h-[260px] flex-col bg-[#1a3929] p-6 md:p-8 transition-colors duration-500 hover:bg-[#1f4431]"
                 >
-                  <div
-                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-                    style={{ background: 'radial-gradient(circle at top right, rgba(255,255,255,0.12) 0%, transparent 55%)' }}
-                  />
-                  <div className={`relative w-10 h-1 rounded-full mb-5 ${style.accent}`} />
-
-                  <div className="relative flex-1 flex flex-col">
-                    <span className={`font-sans text-[10px] sm:text-[11px] font-bold tracking-[0.24em] uppercase mb-3 ${style.index}`}>
-                      0{index + 1}
-                    </span>
-                    <h3 className={`font-sans text-sm sm:text-[15px] font-bold tracking-[0.14em] uppercase leading-snug ${style.title}`}>
+                  <span className="absolute left-0 top-0 h-px w-0 bg-gradient-to-r from-[#d4b472] to-transparent transition-[width] duration-700 ease-out group-hover:w-full" />
+                  <span className="font-serif text-5xl md:text-6xl leading-none text-white/15 transition-colors duration-500 group-hover:text-[#d4b472]">
+                    0{index + 1}
+                  </span>
+                  <div className="mt-auto pt-8">
+                    <h3 className="font-sans text-[13px] sm:text-sm font-bold uppercase tracking-[0.16em] text-white">
                       {item.title}
                     </h3>
+                    <p className="mt-3 font-serif text-sm leading-relaxed text-white/85">
+                      {item.desc}
+                    </p>
                   </div>
-
-                  <p className={`relative font-serif text-[13px] sm:text-[13.5px] leading-relaxed font-light mt-5 ${style.body}`}>
-                    {item.desc}
-                  </p>
-                </motion.div>
-              );
-            })}
+                </div>
+              ))}
+            </div>
           </motion.div>
         </div>
       </div>

@@ -78,7 +78,7 @@ export default function Header({ onPartnerClick }: HeaderProps) {
               <button
                 key={link.name}
                 onClick={() => handleNavClick(link.href)}
-                className="relative group font-sans text-sm font-semibold tracking-wider text-neutral-500 hover:text-[#1A3929] transition-colors duration-300 uppercase cursor-pointer py-1"
+                className="relative group font-sans text-sm font-semibold tracking-wider text-neutral-700 hover:text-[#1A3929] transition-colors duration-300 uppercase cursor-pointer py-1"
               >
                 {link.name}
                 <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-[#c4a25a] group-hover:w-full transition-all duration-300" />

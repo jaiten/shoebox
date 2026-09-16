@@ -69,7 +69,7 @@ export default function BentoFocus({ onSelectOpportunityType }: BentoFocusProps)
               className="mandate-card group p-7 sm:p-10 flex flex-col gap-5 border border-white/10 rounded-2xl"
             >
               <span className="font-sans text-[10px] font-semibold tracking-[0.2em] text-[#d8bf88] uppercase">
-                <span className="text-white/30 mr-4">0{index + 1}</span>
+                <span className="text-white/50 mr-4">0{index + 1}</span>
                 {mandate.tag}
               </span>
 
@@ -77,7 +77,7 @@ export default function BentoFocus({ onSelectOpportunityType }: BentoFocusProps)
                 {mandate.headline}
               </p>
 
-              <p className="font-sans text-white/65 text-sm sm:text-base leading-[1.8] flex-1 max-w-lg">
+              <p className="font-sans text-white/85 text-sm sm:text-base leading-[1.8] flex-1 max-w-lg">
                 {mandate.body}
               </p>
 

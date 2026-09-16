@@ -74,7 +74,7 @@ export default function ContactForm({ selectedType, onClearType }: ContactFormPr
     onClearType();
   };
 
-  const inputClass = 'w-full bg-transparent border-0 border-b border-neutral-200 focus:border-[#1a3929] focus:ring-0 py-3.5 px-0 font-serif text-sm transition-colors duration-300 outline-none';
+  const inputClass = 'w-full bg-transparent border-0 border-b border-[#1a3929]/25 focus:border-[#1a3929] text-[#1a3929] placeholder:text-neutral-500 focus:ring-0 py-3.5 px-0 font-serif text-sm transition-colors duration-300 outline-none';
 
   return (
     <section className="py-20 md:py-32 bg-white border-t border-black/5" id="contact">
@@ -97,7 +97,7 @@ export default function ContactForm({ selectedType, onClearType }: ContactFormPr
               <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight text-[#1a3929] mb-6 md:mb-8 leading-[1.15]">
                 Let&apos;s Start a Conversation.
               </h2>
-              <p className="font-serif text-neutral-500 text-sm md:text-base leading-relaxed mb-10 md:mb-12 font-light">
+              <p className="font-serif text-neutral-700 text-sm md:text-base leading-relaxed mb-10 md:mb-12">
                 Looking to sell your MSP or MSSP, bring on a development partner, arrange short-term real estate financing, or raise capital for a technology venture? Tell us about your opportunity.
               </p>
             </div>
@@ -106,7 +106,7 @@ export default function ContactForm({ selectedType, onClearType }: ContactFormPr
               <p className="font-sans text-xs font-bold uppercase tracking-widest text-[#1a3929]">
                 Head Office &amp; Market Focus
               </p>
-              <div className="grid grid-cols-1 gap-5 font-serif text-xs text-neutral-500 font-light">
+              <div className="grid grid-cols-1 gap-5 font-serif text-xs text-neutral-700">
                 {[
                   { region: 'HEAD OFFICE', city: 'Vancouver, BC, Canada' },
                   { region: 'REAL ESTATE', city: 'British Columbia, Lower Mainland, Greater Victoria, GTA, and Miami' },
@@ -156,13 +156,13 @@ export default function ContactForm({ selectedType, onClearType }: ContactFormPr
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                     <div>
-                      <label className="font-sans text-[10px] font-bold uppercase tracking-wider mb-2 block text-[#1a3929]/60">
+                      <label className="font-sans text-[10px] font-bold uppercase tracking-wider mb-2 block text-[#1a3929]/80">
                         Full Name <span className="font-normal">*</span>
                       </label>
                       <input type="text" name="name" value={formData.name} onChange={handleInputChange} placeholder="John Doe" className={inputClass} required disabled={loading} />
                     </div>
                     <div>
-                      <label className="font-sans text-[10px] font-bold uppercase tracking-wider mb-2 block text-[#1a3929]/60">
+                      <label className="font-sans text-[10px] font-bold uppercase tracking-wider mb-2 block text-[#1a3929]/80">
                         Company
                       </label>
                       <input type="text" name="company" value={formData.company} onChange={handleInputChange} placeholder="Your Company Inc." className={inputClass} disabled={loading} />
@@ -171,7 +171,7 @@ export default function ContactForm({ selectedType, onClearType }: ContactFormPr
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                     <div>
-                      <label className="font-sans text-[10px] font-bold uppercase tracking-wider mb-2 block text-[#1a3929]/60">
+                      <label className="font-sans text-[10px] font-bold uppercase tracking-wider mb-2 block text-[#1a3929]/80">
                         Email Address <span className="font-normal">*</span>
                       </label>
                       <input type="email" name="email" value={formData.email} onChange={handleInputChange} placeholder="johndoe@email.com" className={inputClass} required disabled={loading} />
@@ -184,7 +184,7 @@ export default function ContactForm({ selectedType, onClearType }: ContactFormPr
                   </div>
 
                   <div>
-                    <label className="font-sans text-[10px] font-bold uppercase tracking-wider mb-2 block text-[#1a3929]/60">
+                    <label className="font-sans text-[10px] font-bold uppercase tracking-wider mb-2 block text-[#1a3929]/80">
                       Tell Us More <span className="font-normal">*</span>
                     </label>
                     <textarea
@@ -226,12 +226,12 @@ export default function ContactForm({ selectedType, onClearType }: ContactFormPr
                         INQUIRY RECEIVED
                       </span>
                     </div>
-                    <p className="font-serif text-white/75 text-sm md:text-base leading-relaxed font-light">
+                    <p className="font-serif text-white/90 text-sm md:text-base leading-relaxed">
                       {successMessage}
                     </p>
                   </div>
                   <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] font-semibold tracking-wider">
-                    <span className="uppercase text-white/60">A member of our team will respond directly.</span>
+                    <span className="uppercase text-white/80">A member of our team will respond directly.</span>
                     <button
                       onClick={handleResetForm}
                       className="px-6 py-3 border border-[#c4a25a]/50 hover:border-[#c4a25a] hover:bg-[#c4a25a]/10 text-[#c4a25a] font-sans text-[10px] font-bold uppercase tracking-widest transition-all cursor-pointer"

@@ -86,7 +86,7 @@ export default function OpportunitySelect({ value, onChange, disabled = false }:
     <div ref={root} className="relative min-w-0" onBlur={(event) => {
       if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setOpen(false);
     }}>
-      <label id={`${id}-label`} htmlFor={`${id}-trigger`} className="font-sans text-[10px] font-bold uppercase tracking-wider mb-2 block text-[#1a3929]/60">
+      <label id={`${id}-label`} htmlFor={`${id}-trigger`} className="font-sans text-[10px] font-bold uppercase tracking-wider mb-2 block text-[#1a3929]/80">
         How Can We Help?
       </label>
       <input type="hidden" name="opportunityType" value={value} />
@@ -103,10 +103,10 @@ export default function OpportunitySelect({ value, onChange, disabled = false }:
         disabled={disabled}
         onKeyDown={handleKeyDown}
         onClick={() => { setActive(selected); setOpen(!open); }}
-        className={`flex w-full items-center justify-between gap-3 rounded-xl border px-3.5 py-3 text-left font-sans text-[13px] leading-5 text-[#26392d] shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition-colors duration-150 disabled:cursor-not-allowed disabled:opacity-50 ${open ? 'border-[#1a3929]/30 bg-white ring-4 ring-[#1a3929]/5' : 'border-black/10 bg-white/80 hover:bg-white hover:border-black/20'}`}
+        className={`flex w-full items-center justify-between gap-3 rounded-xl border px-3.5 py-3 text-left font-sans text-[13px] leading-5 text-[#1a3929] transition-colors duration-150 disabled:cursor-not-allowed disabled:opacity-50 ${open ? 'border-[#1a3929]/40 bg-[#f2f0e9] ring-4 ring-[#1a3929]/5' : 'border-[#1a3929]/15 bg-[#f2f0e9] hover:border-[#1a3929]/30'}`}
       >
         <span>{options[selected].label}</span>
-        <ChevronDown aria-hidden="true" className={`h-4 w-4 shrink-0 text-neutral-400 transition-transform duration-200 ${open ? 'rotate-180' : ''}`} />
+        <ChevronDown aria-hidden="true" className={`h-4 w-4 shrink-0 text-[#1a3929]/60 transition-transform duration-200 ${open ? 'rotate-180' : ''}`} />
       </button>
       {open && (
         <motion.ul
@@ -116,7 +116,7 @@ export default function OpportunitySelect({ value, onChange, disabled = false }:
           initial={{ opacity: 0, y: -4, scale: 0.98 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.16 }}
-          className="absolute right-0 top-full z-30 mt-2 max-h-64 w-full origin-top overflow-y-auto rounded-2xl border border-black/8 bg-white/95 p-1.5 shadow-[0_12px_36px_-8px_rgba(0,0,0,0.22),0_2px_8px_rgba(0,0,0,0.04)] backdrop-blur-xl"
+          className="absolute right-0 top-full z-30 mt-2 max-h-64 w-full origin-top overflow-y-auto rounded-2xl border border-[#1a3929]/15 bg-[#f2f0e9] p-1.5 shadow-[0_12px_36px_-8px_rgba(26,57,41,0.25)]"
         >
           {options.map((option, index) => (
             <li
@@ -127,7 +127,7 @@ export default function OpportunitySelect({ value, onChange, disabled = false }:
               onPointerMove={() => setActive(index)}
               onMouseDown={(event) => event.preventDefault()}
               onClick={() => choose(index)}
-              className={`flex cursor-pointer items-center gap-2.5 rounded-lg px-2.5 py-3 font-sans text-[13px] leading-5 transition-colors duration-100 ${active === index ? 'bg-[#1a3929] text-white' : 'text-[#26392d]'}`}
+              className={`flex cursor-pointer items-center gap-2.5 rounded-lg px-2.5 py-3 font-sans text-[13px] leading-5 transition-colors duration-100 ${active === index ? 'bg-[#1a3929] text-white' : 'text-[#1a3929] hover:bg-[#1a3929]/5'}`}
             >
               <Check aria-hidden="true" className={`h-3.5 w-3.5 shrink-0 ${value === option.value ? 'opacity-100' : 'opacity-0'}`} />
               <span>{option.label}</span>

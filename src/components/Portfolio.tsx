@@ -67,7 +67,7 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight text-[#1a3929] mb-4">
               Real Assets. Long-Term Value.
             </h2>
-            <p className="font-serif text-sm md:text-base text-neutral-600 leading-relaxed font-light">
+            <p className="font-serif text-sm md:text-base text-neutral-600 leading-relaxed">
               We invest at the ground level alongside experienced developers.
               Our featured assets include a North Delta townhouse community and
               a rural subdivision in Greater Victoria.
@@ -107,7 +107,7 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
 
                 <div className="flex items-center gap-3 mb-2">
                   <span className="w-3 h-[1px] bg-[#c4a25a]" />
-                  <span className="font-sans text-[10px] font-bold text-[#1a3929]/50 uppercase tracking-[0.25em]">
+                  <span className="font-sans text-[10px] font-bold text-[#1a3929]/75 uppercase tracking-[0.25em]">
                     {project.location} | {project.category}
                   </span>
                 </div>
@@ -115,7 +115,7 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
                   {project.title}
                 </h3>
                 {project.subtitle && (
-                  <p className="mt-2 font-serif text-sm text-neutral-500 leading-relaxed font-light">
+                  <p className="mt-2 font-serif text-sm text-neutral-700 leading-relaxed">
                     {project.subtitle}
                   </p>
                 )}
@@ -135,7 +135,7 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
             <Clock className="w-5 h-5" />
           </div>
           <div>
-            <span className="font-sans text-xs font-bold uppercase tracking-[0.25em] text-[#1a3929]/50 block mb-1">
+            <span className="font-sans text-xs font-bold uppercase tracking-[0.25em] text-[#1a3929]/75 block mb-1">
               More Projects
             </span>
             <p className="font-sans text-lg sm:text-xl font-semibold text-[#1a3929]">
@@ -164,12 +164,12 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
                 Capital, strategy, and long-term partnership for quality
                 projects.
               </h3>
-              <p className="font-serif text-neutral-600 leading-relaxed font-light mb-4">
+              <p className="font-serif text-neutral-600 leading-relaxed mb-4">
                 Shoebox Investments seeks ground-level opportunities in land
                 assemblies, townhouses, high-rise residential developments, and
                 subdivisions across growing North American markets.
               </p>
-              <p className="font-serif text-neutral-600 leading-relaxed font-light">
+              <p className="font-serif text-neutral-600 leading-relaxed">
                 We partner with experienced developers, builders, landowners,
                 and investors by providing capital, strategic guidance, and
                 long-term investment to help move quality projects from concept
@@ -185,7 +185,7 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
                 {partnerInterests.map((interest) => (
                   <div key={interest} className="flex items-start gap-3">
                     <Check className="w-4 h-4 mt-0.5 text-[#c4a25a] flex-shrink-0" />
-                    <span className="font-serif text-sm text-neutral-600 leading-relaxed font-light">
+                    <span className="font-serif text-sm text-neutral-600 leading-relaxed">
                       {interest}
                     </span>
                   </div>
@@ -246,7 +246,7 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
                       {selectedProject.title}
                     </h2>
                     {selectedProject.subtitle && (
-                      <p className="mt-2 font-serif text-sm md:text-base text-white/70 font-light">
+                      <p className="mt-2 font-serif text-sm md:text-base text-white/90">
                         {selectedProject.subtitle}
                       </p>
                     )}
@@ -258,7 +258,7 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
                     <h4 className="font-sans text-xs font-bold uppercase tracking-widest text-[#c4a25a] mb-3">
                       Asset Overview
                     </h4>
-                    <p className="font-serif text-neutral-600 leading-relaxed font-light text-base md:text-lg">
+                    <p className="font-serif text-neutral-600 leading-relaxed text-base md:text-lg">
                       {selectedProject.description}
                     </p>
                   </div>
@@ -275,7 +275,7 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
                             className="flex items-start gap-3 p-3 bg-[#f2f0e9] border border-[#1a3929]/6"
                           >
                             <Check className="w-4 h-4 mt-0.5 text-[#c4a25a] flex-shrink-0" />
-                            <span className="font-serif text-sm text-neutral-600 leading-relaxed font-light">
+                            <span className="font-serif text-sm text-neutral-600 leading-relaxed">
                               {highlight}
                             </span>
                           </div>
@@ -293,14 +293,14 @@ export default function Portfolio({ onPartnerClick }: PortfolioProps) {
                             {selectedProject.interestTitle}
                           </p>
                           {selectedProject.interestText && (
-                            <p className="font-serif text-sm md:text-base text-white/75 leading-relaxed font-light">
+                            <p className="font-serif text-sm md:text-base text-white/90 leading-relaxed">
                               {selectedProject.interestText}
                             </p>
                           )}
                         </div>
                       )}
                       {selectedProject.disclaimer && (
-                        <p className="font-serif text-xs md:text-sm text-neutral-500 leading-relaxed italic">
+                        <p className="font-serif text-xs md:text-sm text-neutral-700 leading-relaxed italic">
                           {selectedProject.disclaimer}
                         </p>
                       )}

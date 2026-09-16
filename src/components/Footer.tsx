@@ -72,7 +72,7 @@ export default function Footer({ onContactClick }: FooterProps) {
           >
             SHOEBOX INVESTMENTS
           </button>
-          <p className="font-serif text-sm md:text-base text-[#8fbc9e] leading-relaxed font-light">
+          <p className="font-serif text-sm md:text-base text-[#8fbc9e] leading-relaxed">
             Headquartered in Vancouver, we acquire MSPs and MSSPs, invest at the
             ground level in real estate development, provide short-term private
             lending, and back early-stage technology ventures across North America.
@@ -148,7 +148,7 @@ export default function Footer({ onContactClick }: FooterProps) {
       </div>
 
       <div className="border-t border-white/10 py-8 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left relative">
-        <p className="font-sans text-[10px] sm:text-[11px] text-[#6b9e7a] tracking-[0.16em] sm:tracking-wider font-semibold">
+        <p className="font-sans text-[10px] sm:text-[11px] text-[#a8cdb4] tracking-[0.16em] sm:tracking-wider font-semibold">
           &copy; {new Date().getFullYear()} Shoebox Investments Inc. All Rights
           Reserved. Informational materials only. Not an offer to sell
           securities.
@@ -157,7 +157,7 @@ export default function Footer({ onContactClick }: FooterProps) {
         <div className="flex gap-6 items-center">
           <button
             onClick={() => setActiveDisclaimer("disclaimer")}
-            className="text-[#6b9e7a] hover:text-[#c4a25a] transition-colors duration-200"
+            className="text-[#a8cdb4] hover:text-[#c4a25a] transition-colors duration-200"
             title="Registered Protection Status"
           >
             <Shield className="w-5 h-5 opacity-60 hover:opacity-100" />
@@ -168,7 +168,7 @@ export default function Footer({ onContactClick }: FooterProps) {
               e.preventDefault();
               handleScrollToTop();
             }}
-            className="p-2 border border-[#c4a25a]/30 rounded-full hover:border-[#c4a25a] text-[#6b9e7a] hover:text-[#c4a25a] transition-all duration-200"
+            className="p-2 border border-[#c4a25a]/30 rounded-full hover:border-[#c4a25a] text-[#a8cdb4] hover:text-[#c4a25a] transition-all duration-200"
             title="Scroll back to header"
           >
             <ChevronUp className="w-4 h-4" />
@@ -195,7 +195,7 @@ export default function Footer({ onContactClick }: FooterProps) {
                 }
               </h3>
             </div>
-            <p className="font-serif text-neutral-600 text-sm leading-relaxed mb-6 font-light">
+            <p className="font-serif text-neutral-700 text-sm leading-relaxed mb-6">
               {
                 legalDisclosures[
                   activeDisclaimer as keyof typeof legalDisclosures
