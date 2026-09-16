@@ -26,36 +26,24 @@ export default function Ethos() {
     },
   ];
 
-  const cardStyles = [
-    {
-      panel: 'bg-[#1a3929] border-white/12 hover:border-[#c4a25a]/35',
-      accent: 'bg-[#c4a25a]',
-      index: 'text-[#c4a25a]',
-      title: 'text-white',
-      body: 'text-white/72',
-    },
-    {
-      panel: 'bg-[#213c2e] border-white/12 hover:border-[#c4a25a]/35',
-      accent: 'bg-[#c4a25a]',
-      index: 'text-[#c4a25a]',
-      title: 'text-white',
-      body: 'text-white/72',
-    },
-    {
-      panel: 'bg-[#213c2e] border-white/12 hover:border-[#c4a25a]/35',
-      accent: 'bg-[#c4a25a]',
-      index: 'text-[#c4a25a]',
-      title: 'text-white',
-      body: 'text-white/72',
-    },
-    {
-      panel: 'bg-[#1a3929]/32 border-white/8 hover:border-[#c4a25a]/25',
-      accent: 'bg-[#1a3929]/55',
-      index: 'text-[#dbe7df]',
-      title: 'text-white',
-      body: 'text-white/70',
-    },
-  ];
+  const greenCard = {
+    panel: 'bg-[#1a3929] border-white/12 hover:border-[#c4a25a]/50',
+    accent: 'bg-[#d4b472]',
+    index: 'text-[#d4b472]',
+    title: 'text-white',
+    body: 'text-white/72',
+  };
+
+  const goldCard = {
+    panel: 'bg-[#d4b472] border-[#e2c995] hover:border-[#f0dbb1]',
+    accent: 'bg-[#927025]',
+    index: 'text-[#1a3929]/75',
+    title: 'text-[#1a3929]',
+    body: 'text-[#1a3929]/85',
+  };
+
+  // Echo the logo's green / gold / gold / green arrangement.
+  const cardStyles = [greenCard, goldCard, goldCard, greenCard];
 
   return (
     <section className="py-20 md:py-32 bg-[#0e2116] text-white overflow-hidden relative" id="philosophy">
@@ -136,7 +124,7 @@ export default function Ethos() {
                     className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                     style={{ background: 'radial-gradient(circle at top right, rgba(255,255,255,0.12) 0%, transparent 55%)' }}
                   />
-                  <div className={`relative w-10 h-1 mb-5 ${style.accent}`} />
+                  <div className={`relative w-10 h-1 rounded-full mb-5 ${style.accent}`} />
 
                   <div className="relative flex-1 flex flex-col">
                     <span className={`font-sans text-[10px] sm:text-[11px] font-bold tracking-[0.24em] uppercase mb-3 ${style.index}`}>

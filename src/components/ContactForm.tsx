@@ -7,6 +7,7 @@ import { useState, useEffect, ChangeEvent } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
 import { InquiryInput, InquiryResponse } from '../types';
+import OpportunitySelect from './OpportunitySelect';
 
 interface ContactFormProps {
   selectedType: string | null;
@@ -138,9 +139,9 @@ export default function ContactForm({ selectedType, onClearType }: ContactFormPr
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0 }}
                   onSubmit={handleSubmit}
-                  className="rounded-2xl space-y-8 bg-[#f2f0e9] p-5 sm:p-6 md:p-14 border border-[#1a3929]/10 shadow-sm relative overflow-hidden"
+                  className="rounded-2xl space-y-8 bg-[#f2f0e9] p-5 sm:p-6 md:p-14 border border-[#1a3929]/10 shadow-sm relative"
                 >
-                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#1a3929] via-[#c4a25a] to-[#1a3929]" />
+                  <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-[#1a3929] via-[#c4a25a] to-[#1a3929]" />
 
                   <h3 className="font-sans text-sm font-semibold tracking-widest uppercase text-[#1a3929] border-b border-[#1a3929]/10 pb-3 block">
                     TELL US ABOUT YOUR OPPORTUNITY
@@ -175,17 +176,11 @@ export default function ContactForm({ selectedType, onClearType }: ContactFormPr
                       </label>
                       <input type="email" name="email" value={formData.email} onChange={handleInputChange} placeholder="johndoe@email.com" className={inputClass} required disabled={loading} />
                     </div>
-                    <div>
-                      <label className="font-sans text-[10px] font-bold uppercase tracking-wider mb-2 block text-[#1a3929]/60">
-                        How Can We Help?
-                      </label>
-                      <select name="opportunityType" value={formData.opportunityType} onChange={handleInputChange} className={`${inputClass} cursor-pointer`} disabled={loading}>
-                        <option value="MSP/Technology">Sell Your MSP / MSSP</option>
-                        <option value="Real Estate">Real Estate Development Partnership</option>
-                        <option value="Private Lending">Short-Term Real Estate Financing</option>
-                        <option value="Other Investment">Venture Capital / Investment Partnership</option>
-                      </select>
-                    </div>
+                    <OpportunitySelect
+                      value={formData.opportunityType}
+                      onChange={(opportunityType) => setFormData((prev) => ({ ...prev, opportunityType }))}
+                      disabled={loading}
+                    />
                   </div>
 
                   <div>
@@ -223,7 +218,7 @@ export default function ContactForm({ selectedType, onClearType }: ContactFormPr
                   exit={{ opacity: 0 }}
                   className="bg-[#1a3929] text-white p-5 sm:p-6 md:p-12 border border-[#c4a25a]/20 shadow-xl space-y-8 font-sans relative overflow-hidden"
                 >
-                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#c4a25a] via-[#d4b472] to-[#c4a25a]" />
+                  <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-[#c4a25a] via-[#d4b472] to-[#c4a25a]" />
                   <div className="space-y-4 border-b border-white/15 pb-6">
                     <div className="flex items-center gap-3">
                       <CheckCircle2 className="w-6 h-6 text-[#c4a25a] flex-shrink-0" />
